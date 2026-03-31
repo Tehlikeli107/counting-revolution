@@ -1,0 +1,4 @@
+graph_data/*.g6
+graph_data/*.npy
+*.pyc
+__pycache__/
