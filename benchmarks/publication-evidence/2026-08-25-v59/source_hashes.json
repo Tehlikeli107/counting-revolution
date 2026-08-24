@@ -1,0 +1,15 @@
+{
+  "repository": "salihcankurnaz/counting-revolution",
+  "branch": "master",
+  "expected_parent_sha": "e7db3126e92ec37ea509e6add7920d4432aa272a",
+  "source_file": {
+    "path": "graph_n8_exhaustive.py",
+    "git_blob_sha": "8ddf73479a7653bed7b7a93beada9f364d57c9dd"
+  },
+  "representative_selection": {
+    "path": "benchmarks/publication-evidence/2026-08-25-v54/representative_selection.json",
+    "git_blob_sha": "7c67ad56df7ed9a1e24e8fd2b7b762472c2ee4ba"
+  },
+  "catalog_graph9_sha256": "839f67ecc73b1f539128694badebe27adf4f0fb1ee6d0663b7ad9868100d5123",
+  "v59_uploaded_result_zip_sha256": "099c63b06e389a9418539438ced7d8016bcb218a68736dced1ddf72c9c28b1b2"
+}

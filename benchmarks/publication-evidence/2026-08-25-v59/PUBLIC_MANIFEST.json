@@ -1,0 +1,106 @@
+{
+  "artifact_version": "v60-public-preview",
+  "source_capture_version": "v59",
+  "repository": "salihcankurnaz/counting-revolution",
+  "target_branch": "master",
+  "expected_parent_sha": "e7db3126e92ec37ea509e6add7920d4432aa272a",
+  "target_directory": "benchmarks/publication-evidence/2026-08-25-v59",
+  "content_encoding": "UTF-8/ASCII text with canonical LF line endings",
+  "files": [
+    {
+      "path": "CATALOG_ATTRIBUTION.md",
+      "bytes": 613,
+      "sha256": "cad84e49c37bfa97aa1ef77b770e804d9985033eb1f430f368252cc71ad068a4"
+    },
+    {
+      "path": "CLAIM_SAFE_RESULTS.json",
+      "bytes": 2253,
+      "sha256": "2e1f2517cbf454f9c2961573a740754e63d4402feb5ab2a2eeee0202c42b1d94"
+    },
+    {
+      "path": "CLAIM_SAFE_RESULTS.md",
+      "bytes": 2191,
+      "sha256": "863e5306bf4c95803a19a29031d49588e8ce1680876a13c63ba62fbf8b308b23"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5083,
+      "sha256": "9a4f1109ba25ec8d5fa856daea9ef7b972cebf2317f5d4264c416d7fa9af4381"
+    },
+    {
+      "path": "best_incomplete_collision_groups.json",
+      "bytes": 2397,
+      "sha256": "0484fcd3b69cf225d1cbd93f36989bf823d51b7ce5d270b41197b8d671c08e31"
+    },
+    {
+      "path": "capture_manifest_v59.json",
+      "bytes": 1975,
+      "sha256": "4542fc5719a8e3bfe713b2053b8e117eb10ac98f5886509427b291dbe9f7779a"
+    },
+    {
+      "path": "catalog_provenance.json",
+      "bytes": 768,
+      "sha256": "95440c65f76fcc883ed654ddbbac0d24422463b3035fcc5d00d9d0e7ad1b2e3d"
+    },
+    {
+      "path": "component_summary.csv",
+      "bytes": 431,
+      "sha256": "d64b9fb123f9b2dfa43560c1f59ef833e08f12d0b7f838f0578cc910a6fa37e5"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 267,
+      "sha256": "b6114bcafb09c81b519b7746a061855a1991def8246387427413a0e5257d0c5b"
+    },
+    {
+      "path": "graph9.g6",
+      "bytes": 2197344,
+      "sha256": "839f67ecc73b1f539128694badebe27adf4f0fb1ee6d0663b7ad9868100d5123"
+    },
+    {
+      "path": "independent_graph9_global_minimality_v59.py",
+      "bytes": 30445,
+      "sha256": "d68261ab15ab88fae1635823c30c4606c4c470c9b6f2e2111a7dbbf2589ce654"
+    },
+    {
+      "path": "methodology.json",
+      "bytes": 2435,
+      "sha256": "a48af0403e46889a90dfd457442209216153a7877d6fbdd23b1973a21fd5635f"
+    },
+    {
+      "path": "minimum_subset_deletion_test.csv",
+      "bytes": 5137,
+      "sha256": "9d22c5c1707c0c33dfe75ba0c357cdb13a7f7736bdaa7407e60ea212217113ca"
+    },
+    {
+      "path": "minimum_subsets.csv",
+      "bytes": 773,
+      "sha256": "00eb61b1b374022dc8f10710de5c8fce1b8f2bbe8b0537b8d2180a051e71515f"
+    },
+    {
+      "path": "source_hashes.json",
+      "bytes": 663,
+      "sha256": "cb19c61ae0ac528b7ac80a54f8d975ec286e1d277a2b484c538fdf83acf5290b"
+    },
+    {
+      "path": "source_provenance.json",
+      "bytes": 692,
+      "sha256": "94e699fbd5f7d3d5a60d13a6fa243917a5f22d840ad6278392d168d04fb69798"
+    },
+    {
+      "path": "subset_search_up_to_minimum.csv",
+      "bytes": 112996,
+      "sha256": "3db5d3c260f63459e4bd6767a7873b6c53a6105b3d47c1a003a194d75c292870"
+    }
+  ],
+  "sanitization": {
+    "contains_absolute_user_paths": false,
+    "contains_tokens_or_private_keys": false,
+    "contains_raw_secrets": false,
+    "contains_third_party_catalog_data": true,
+    "third_party_catalog": "Brendan McKay graph9.g6",
+    "third_party_catalog_license": "CC BY 4.0",
+    "catalog_attribution_file": "CATALOG_ATTRIBUTION.md",
+    "catalog_provenance_file": "catalog_provenance.json"
+  }
+}

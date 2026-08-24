@@ -1,0 +1,64 @@
+{
+  "artifact_version": "v60-public-preview",
+  "source_capture_version": "v59",
+  "repository": "salihcankurnaz/counting-revolution",
+  "repository_id": 1193202490,
+  "branch": "master",
+  "expected_parent_sha": "e7db3126e92ec37ea509e6add7920d4432aa272a",
+  "source": {
+    "path": "graph_n8_exhaustive.py",
+    "git_blob_sha": "8ddf73479a7653bed7b7a93beada9f364d57c9dd"
+  },
+  "upstream_representative_selection": {
+    "path": "benchmarks/publication-evidence/2026-08-25-v54/representative_selection.json",
+    "git_blob_sha": "7c67ad56df7ed9a1e24e8fd2b7b762472c2ee4ba"
+  },
+  "catalog": {
+    "name": "Brendan McKay graph9.g6",
+    "url": "https://users.cecs.anu.edu.au/~bdm/data/graph9.g6",
+    "catalog_index": "https://users.cecs.anu.edu.au/~bdm/data/graphs.html",
+    "graphs": 274668,
+    "connected_graphs": 261080,
+    "bytes": 2197344,
+    "sha256": "839f67ecc73b1f539128694badebe27adf4f0fb1ee6d0663b7ad9868100d5123"
+  },
+  "search_space": {
+    "top_level_components": 13,
+    "cardinality_1_subsets_checked": 13,
+    "cardinality_2_subsets_checked": 78,
+    "cardinality_3_subsets_checked": 286,
+    "cardinality_4_subsets_checked": 715,
+    "total_subsets_checked_through_minimum": 1092,
+    "best_distinct_by_cardinality": {
+      "1": 247357,
+      "2": 274034,
+      "3": 274664,
+      "4": 274668
+    },
+    "minimum_cardinality_within_13_top_level_components": 4,
+    "minimum_subset_count": 6
+  },
+  "representative_minimum_witness": [
+    "characteristic_coefficients",
+    "spanning_tree_count",
+    "local_clustering_multiset",
+    "neighbor_degree_profile"
+  ],
+  "validation": {
+    "published_v54_representative_collision_groups_reconstructed": 458,
+    "published_v54_representative_collision_members_reconstructed": 917,
+    "independent_vs_source_parity_checks": 3215,
+    "best_incomplete_collision_source_parity_checks": 8,
+    "minimum_witness_deletion_checks": 24,
+    "minimum_witness_deletion_checks_complete_after_deletion": 0
+  },
+  "claim_scope": [
+    "finite complete McKay order-9 catalog only",
+    "minimum only among the exact 13 top-level component definitions",
+    "no minimum claim over internal subfeatures or arbitrary graph invariants",
+    "no completeness claim for n > 9",
+    "no general graph-isomorphism algorithm claim",
+    "no asymptotic, novelty, or priority claim"
+  ],
+  "line_endings": "All public text/CSV payloads are canonicalized to LF before hashing and staging."
+}

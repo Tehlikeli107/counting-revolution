@@ -1,0 +1,22 @@
+{
+  "url": "https://users.cecs.anu.edu.au/~bdm/data/graph9.g6",
+  "sha256": "839f67ecc73b1f539128694badebe27adf4f0fb1ee6d0663b7ad9868100d5123",
+  "download": {
+    "requested_url": "https://users.cecs.anu.edu.au/~bdm/data/graph9.g6",
+    "final_url": "https://users.cecs.anu.edu.au/~bdm/data/graph9.g6",
+    "http_status": 200,
+    "headers": {
+      "Server": "nginx",
+      "Date": "Mon, 24 Aug 2026 23:03:17 GMT",
+      "Content-Length": "2197344",
+      "Connection": "close",
+      "Last-Modified": "Sun, 05 Aug 2001 12:30:49 GMT",
+      "ETag": "\"218760-38ac78ffd5040\"",
+      "Accept-Ranges": "bytes"
+    },
+    "bytes": 2197344,
+    "sha256": "839f67ecc73b1f539128694badebe27adf4f0fb1ee6d0663b7ad9868100d5123"
+  },
+  "graphs": 274668,
+  "connected": 261080
+}

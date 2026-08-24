@@ -1,0 +1,7 @@
+cardinality,component_indices,components,distinct_signatures
+4,"1,7,8,9",traces_A1_to_An|spanning_tree_count|local_clustering_multiset|neighbor_degree_profile,274668
+4,"1,8,9,10",traces_A1_to_An|local_clustering_multiset|neighbor_degree_profile|edge_common_neighbor_profile,274668
+4,"1,8,9,11",traces_A1_to_An|local_clustering_multiset|neighbor_degree_profile|nonedge_common_neighbor_profile,274668
+4,"2,7,8,9",characteristic_coefficients|spanning_tree_count|local_clustering_multiset|neighbor_degree_profile,274668
+4,"2,8,9,10",characteristic_coefficients|local_clustering_multiset|neighbor_degree_profile|edge_common_neighbor_profile,274668
+4,"2,8,9,11",characteristic_coefficients|local_clustering_multiset|neighbor_degree_profile|nonedge_common_neighbor_profile,274668

@@ -1,0 +1,73 @@
+{
+  "version": "v59",
+  "experiment": "global minimum cardinality among 13 top-level graph-signature components on McKay order-9 catalog",
+  "catalog_graphs": 274668,
+  "connected_graphs": 261080,
+  "top_level_components": 13,
+  "subsets_checked_by_cardinality": {
+    "1": 13,
+    "2": 78,
+    "3": 286,
+    "4": 715
+  },
+  "best_distinct_signatures_by_cardinality": {
+    "1": 247357,
+    "2": 274034,
+    "3": 274664,
+    "4": 274668
+  },
+  "minimum_cardinality_within_13_top_level_components": 4,
+  "minimum_subset_count_recorded": 6,
+  "minimum_subsets": [
+    [
+      "traces_A1_to_An",
+      "spanning_tree_count",
+      "local_clustering_multiset",
+      "neighbor_degree_profile"
+    ],
+    [
+      "traces_A1_to_An",
+      "local_clustering_multiset",
+      "neighbor_degree_profile",
+      "edge_common_neighbor_profile"
+    ],
+    [
+      "traces_A1_to_An",
+      "local_clustering_multiset",
+      "neighbor_degree_profile",
+      "nonedge_common_neighbor_profile"
+    ],
+    [
+      "characteristic_coefficients",
+      "spanning_tree_count",
+      "local_clustering_multiset",
+      "neighbor_degree_profile"
+    ],
+    [
+      "characteristic_coefficients",
+      "local_clustering_multiset",
+      "neighbor_degree_profile",
+      "edge_common_neighbor_profile"
+    ],
+    [
+      "characteristic_coefficients",
+      "local_clustering_multiset",
+      "neighbor_degree_profile",
+      "nonedge_common_neighbor_profile"
+    ]
+  ],
+  "v58_five_component_witness": [
+    "characteristic_coefficients",
+    "wiener_index",
+    "spanning_tree_count",
+    "local_clustering_multiset",
+    "neighbor_degree_profile"
+  ],
+  "v58_five_component_witness_distinct_signatures": 274668,
+  "representative_collision_groups_reconstructed": 458,
+  "representative_collision_members_reconstructed": 917,
+  "independent_vs_source_parity_checks": 3215,
+  "best_incomplete_collision_source_parity_checks": 8,
+  "claim_scope": "Global minimum cardinality only within the exact 13 top-level component definitions evaluated on Brendan McKay's complete 274,668-graph order-9 catalog. No minimum claim over component subfeatures or arbitrary graph invariants, no n>9 completeness claim, and no novelty/priority claim.",
+  "elapsed_seconds": 323.7861969470978
+}

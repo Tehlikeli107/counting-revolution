@@ -1,0 +1,126 @@
+{
+  "cardinality": 3,
+  "best_distinct_signatures": 274664,
+  "best_subsets": [
+    [
+      "traces_A1_to_An",
+      "local_clustering_multiset",
+      "neighbor_degree_profile"
+    ],
+    [
+      "characteristic_coefficients",
+      "local_clustering_multiset",
+      "neighbor_degree_profile"
+    ]
+  ],
+  "details": [
+    {
+      "components": [
+        "traces_A1_to_An",
+        "local_clustering_multiset",
+        "neighbor_degree_profile"
+      ],
+      "distinct_signatures": 274664,
+      "collision_groups": [
+        {
+          "catalog_indices": [
+            207434,
+            238535
+          ],
+          "graph6": [
+            "HCXedrS",
+            "HCpdbhM"
+          ],
+          "size": 2
+        },
+        {
+          "catalog_indices": [
+            207442,
+            238541
+          ],
+          "graph6": [
+            "HCXedr[",
+            "HCpdbh]"
+          ],
+          "size": 2
+        },
+        {
+          "catalog_indices": [
+            220665,
+            225490
+          ],
+          "graph6": [
+            "HCZNN_|",
+            "HCZbnQZ"
+          ],
+          "size": 2
+        },
+        {
+          "catalog_indices": [
+            256764,
+            261027
+          ],
+          "graph6": [
+            "HCrvRo|",
+            "HCzbri]"
+          ],
+          "size": 2
+        }
+      ]
+    },
+    {
+      "components": [
+        "characteristic_coefficients",
+        "local_clustering_multiset",
+        "neighbor_degree_profile"
+      ],
+      "distinct_signatures": 274664,
+      "collision_groups": [
+        {
+          "catalog_indices": [
+            207434,
+            238535
+          ],
+          "graph6": [
+            "HCXedrS",
+            "HCpdbhM"
+          ],
+          "size": 2
+        },
+        {
+          "catalog_indices": [
+            207442,
+            238541
+          ],
+          "graph6": [
+            "HCXedr[",
+            "HCpdbh]"
+          ],
+          "size": 2
+        },
+        {
+          "catalog_indices": [
+            220665,
+            225490
+          ],
+          "graph6": [
+            "HCZNN_|",
+            "HCZbnQZ"
+          ],
+          "size": 2
+        },
+        {
+          "catalog_indices": [
+            256764,
+            261027
+          ],
+          "graph6": [
+            "HCrvRo|",
+            "HCzbri]"
+          ],
+          "size": 2
+        }
+      ]
+    }
+  ]
+}
