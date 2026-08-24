@@ -1,0 +1,47 @@
+{
+  "artifact_version": "v55-public-preview",
+  "source_capture_version": "v54",
+  "upstream_validated_evidence": "2026-08-25-v51",
+  "repository": "salihcankurnaz/counting-revolution",
+  "repository_id": 1193202490,
+  "branch": "master",
+  "expected_parent_sha": "c8c03c3ec0f0fa32219c094709fcd9ce8b708661",
+  "upstream_signature_csv": {
+    "path": "benchmarks/publication-evidence/2026-08-25-v51/graph_signatures.csv",
+    "git_blob_sha": "597935b79fc54520d84a93d94ba5c27b20db46a5",
+    "rows": 12346,
+    "full_signature_components": 13
+  },
+  "search": {
+    "single_subsets_checked": 13,
+    "pair_subsets_checked": 78,
+    "triple_subsets_checked": 286,
+    "complete_singles": 0,
+    "complete_pairs": 0,
+    "complete_triples": 13,
+    "minimum_cardinality_within_13_top_level_components": 3
+  },
+  "representative": {
+    "selection_version": "v55",
+    "representative_complete_triple": [
+      "characteristic_coefficients",
+      "wiener_index",
+      "local_clustering_multiset"
+    ],
+    "selection_criterion": "smallest mean compact JSON serialized length among the 13 complete top-level triples on the committed V51 table; used only as a compact public representative",
+    "mean_serialized_characters_per_graph": 84.86756844322048,
+    "median_serialized_characters_per_graph": 85.0,
+    "max_serialized_characters_per_graph": 102,
+    "catalog_graphs": 12346,
+    "distinct_representative_signatures": 12346,
+    "claim_limit": "This selection does not establish minimum computational cost, minimum bit encoding, or global optimality over component subfeatures/arbitrary invariants."
+  },
+  "claim_scope": [
+    "finite McKay order-8 catalog only",
+    "minimum only within the 13 top-level V51 components",
+    "no minimum claim over component subfeatures or arbitrary graph invariants",
+    "no n>8 completeness claim",
+    "no asymptotic, novelty, or priority claim"
+  ],
+  "line_endings": "All public text and CSV payloads are canonical LF."
+}

@@ -1,0 +1,96 @@
+{
+  "artifact_version": "v55-public-preview",
+  "source_capture_version": "v54",
+  "repository": "salihcankurnaz/counting-revolution",
+  "target_branch": "master",
+  "expected_parent_sha": "c8c03c3ec0f0fa32219c094709fcd9ce8b708661",
+  "target_directory": "benchmarks/publication-evidence/2026-08-25-v54",
+  "content_encoding": "UTF-8 text/CSV with canonical LF line endings",
+  "files": [
+    {
+      "path": "CLAIM_SAFE_RESULTS.json",
+      "bytes": 2516,
+      "sha256": "17d9ffefafa9db797813578689717147e45426c65097a9da13d342a608f2fe0c"
+    },
+    {
+      "path": "CLAIM_SAFE_RESULTS.md",
+      "bytes": 1422,
+      "sha256": "313147641abc42c739740b43015dbbd77bbbc20cfc459b8d9214aea12a940020"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3704,
+      "sha256": "f225c7e732122e5be25eea5121b868e473250c176bb8f307c7dc1d11604309f0"
+    },
+    {
+      "path": "best_pair_collision.json",
+      "bytes": 3944,
+      "sha256": "d04f519282723246a07645da34cbc2a97c09eae632df45a8f16eb522c54331f1"
+    },
+    {
+      "path": "capture_manifest_v54.json",
+      "bytes": 1822,
+      "sha256": "e670afeb654a5b6a96cbea5badf8d9345367a91938858174e3fbe2001de3ff68"
+    },
+    {
+      "path": "complete_triple_deletion_test.csv",
+      "bytes": 5867,
+      "sha256": "a479aadfa97ff0eccd8862a251047823b7a84d292b575e2c346295ad6e84e714"
+    },
+    {
+      "path": "complete_triples.csv",
+      "bytes": 999,
+      "sha256": "f2e120ba22657e79e4e3d82608cefb9b2140b824be8853904b5b8113fbebeb9c"
+    },
+    {
+      "path": "component_summary.csv",
+      "bytes": 419,
+      "sha256": "40704c50dbf9f296705c84696228822e8137bff2b41c05cdd61ddfdc7eb425a3"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 224,
+      "sha256": "dc700cbd6caee73958fb4ff58589d08dba1e732a0160d0b671d999a7f2f133ae"
+    },
+    {
+      "path": "independent_component_minimality_v54.py",
+      "bytes": 22601,
+      "sha256": "519b8de4e5cf3a9aa6dd97928f85dc9053fa5451bfa7be5e8216fd8f56a59055"
+    },
+    {
+      "path": "methodology.json",
+      "bytes": 1966,
+      "sha256": "5f3d11f2dff9328857e0aaf8c90378cf02d526241faec54b59f9a81a757984f8"
+    },
+    {
+      "path": "partition_equivalences.json",
+      "bytes": 129,
+      "sha256": "803f87089ddd51f7749fb8a4f7a51187599a399caec34af2dc6b033da0197b5e"
+    },
+    {
+      "path": "representative_selection.json",
+      "bytes": 753,
+      "sha256": "b8403aef0ddf609029c8aa48527b822d94c90901a05ef22622a4254544414d84"
+    },
+    {
+      "path": "representative_triple_signatures.csv",
+      "bytes": 2036811,
+      "sha256": "b29fde2ba25fc2120057a082624b057df405cb718af2900829ff2f2fb8c61186"
+    },
+    {
+      "path": "source_hashes.json",
+      "bytes": 564,
+      "sha256": "a683739240a8d2e8cd3d0a51eb47b7b6bedb1c8986016b93a8ea241c55d34c73"
+    },
+    {
+      "path": "source_provenance.json",
+      "bytes": 529,
+      "sha256": "aa7f1521cb0df9adba421886b3b934b30b1c598b457ea3404b7014619d3bcc3f"
+    },
+    {
+      "path": "subset_search_cardinality_1_to_3.csv",
+      "bytes": 30919,
+      "sha256": "3201d5708ede2405774dfff177839308ae7c12f5278da4d3e19994b9376c8da4"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "version": "v54",
+  "experiment": "order-8 graph signature top-level component minimality analysis",
+  "population": "12,346 McKay order-8 non-isomorphic simple graphs from committed V51 evidence",
+  "top_level_components": 13,
+  "single_subsets_checked": 13,
+  "pair_subsets_checked": 78,
+  "triple_subsets_checked": 286,
+  "complete_single_count": 0,
+  "complete_pair_count": 0,
+  "complete_triple_count": 13,
+  "minimum_cardinality_within_13_top_level_components": 3,
+  "best_single_distinct_signatures": 11453,
+  "best_pair_distinct_signatures": 12345,
+  "complete_triples": [
+    [
+      "traces_A1_to_An",
+      "distance_histogram",
+      "local_clustering_multiset"
+    ],
+    [
+      "traces_A1_to_An",
+      "wiener_index",
+      "local_clustering_multiset"
+    ],
+    [
+      "traces_A1_to_An",
+      "eccentricities",
+      "local_clustering_multiset"
+    ],
+    [
+      "traces_A1_to_An",
+      "spanning_tree_count",
+      "neighbor_degree_profile"
+    ],
+    [
+      "traces_A1_to_An",
+      "local_clustering_multiset",
+      "neighbor_degree_profile"
+    ],
+    [
+      "traces_A1_to_An",
+      "local_clustering_multiset",
+      "induced4_degree_sequence_profile"
+    ],
+    [
+      "characteristic_coefficients",
+      "distance_histogram",
+      "local_clustering_multiset"
+    ],
+    [
+      "characteristic_coefficients",
+      "wiener_index",
+      "local_clustering_multiset"
+    ],
+    [
+      "characteristic_coefficients",
+      "eccentricities",
+      "local_clustering_multiset"
+    ],
+    [
+      "characteristic_coefficients",
+      "spanning_tree_count",
+      "neighbor_degree_profile"
+    ],
+    [
+      "characteristic_coefficients",
+      "local_clustering_multiset",
+      "neighbor_degree_profile"
+    ],
+    [
+      "characteristic_coefficients",
+      "local_clustering_multiset",
+      "induced4_degree_sequence_profile"
+    ],
+    [
+      "spanning_tree_count",
+      "local_clustering_multiset",
+      "neighbor_degree_profile"
+    ]
+  ],
+  "partition_equivalences": [
+    [
+      "traces_A1_to_An",
+      "characteristic_coefficients"
+    ]
+  ],
+  "best_pair_collision_catalog_indices": [
+    266,
+    348
+  ],
+  "best_pair_collision_graph6": [
+    "G?AFBo",
+    "G?B@`w"
+  ],
+  "claim_scope": "Minimum cardinality 3 only within the 13 top-level components of the exact V51 counting signature, evaluated on the 12,346-graph McKay order-8 catalog. No claim about subfeatures, all conceivable graph invariants, n>8, or novelty.",
+  "elapsed_seconds": 10.83372449874878
+}

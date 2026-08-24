@@ -1,0 +1,15 @@
+{
+  "selection_version": "v55",
+  "representative_complete_triple": [
+    "characteristic_coefficients",
+    "wiener_index",
+    "local_clustering_multiset"
+  ],
+  "selection_criterion": "smallest mean compact JSON serialized length among the 13 complete top-level triples on the committed V51 table; used only as a compact public representative",
+  "mean_serialized_characters_per_graph": 84.86756844322048,
+  "median_serialized_characters_per_graph": 85.0,
+  "max_serialized_characters_per_graph": 102,
+  "catalog_graphs": 12346,
+  "distinct_representative_signatures": 12346,
+  "claim_limit": "This selection does not establish minimum computational cost, minimum bit encoding, or global optimality over component subfeatures/arbitrary invariants."
+}

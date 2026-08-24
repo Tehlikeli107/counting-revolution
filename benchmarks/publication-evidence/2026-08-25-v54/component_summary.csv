@@ -1,0 +1,14 @@
+component_index,component,distinct_values
+0,degree_sequence,1213
+1,traces_A1_to_An,11453
+2,characteristic_coefficients,11453
+3,component_count,8
+4,distance_histogram,555
+5,wiener_index,80
+6,eccentricities,116
+7,spanning_tree_count,3701
+8,local_clustering_multiset,9511
+9,neighbor_degree_profile,9863
+10,edge_common_neighbor_profile,2051
+11,nonedge_common_neighbor_profile,4082
+12,induced4_degree_sequence_profile,11297

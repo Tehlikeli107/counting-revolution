@@ -1,0 +1,159 @@
+{
+  "best_pair_distinct_signatures": 12345,
+  "best_pairs": [
+    {
+      "components": [
+        "traces_A1_to_An",
+        "local_clustering_multiset"
+      ],
+      "distinct_signatures": 12345,
+      "collision_groups": [
+        {
+          "row_indices": [
+            266,
+            348
+          ],
+          "catalog_indices": [
+            266,
+            348
+          ],
+          "graph6": [
+            "G?AFBo",
+            "G?B@`w"
+          ],
+          "edges": [
+            8,
+            8
+          ],
+          "connected": [
+            true,
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "components": [
+        "characteristic_coefficients",
+        "local_clustering_multiset"
+      ],
+      "distinct_signatures": 12345,
+      "collision_groups": [
+        {
+          "row_indices": [
+            266,
+            348
+          ],
+          "catalog_indices": [
+            266,
+            348
+          ],
+          "graph6": [
+            "G?AFBo",
+            "G?B@`w"
+          ],
+          "edges": [
+            8,
+            8
+          ],
+          "connected": [
+            true,
+            true
+          ]
+        }
+      ]
+    }
+  ],
+  "shared_collision_row_indices": [
+    266,
+    348
+  ],
+  "shared_collision_catalog_indices": [
+    266,
+    348
+  ],
+  "shared_collision_graph6": [
+    "G?AFBo",
+    "G?B@`w"
+  ],
+  "component_comparison": [
+    {
+      "component": "degree_sequence",
+      "equal_on_collision_pair": true,
+      "value_a": "[1,1,1,2,2,2,3,4]",
+      "value_b": "[1,1,1,2,2,2,3,4]"
+    },
+    {
+      "component": "traces_A1_to_An",
+      "equal_on_collision_pair": true,
+      "value_a": "[0,16,0,72,0,376,0,2064]",
+      "value_b": "[0,16,0,72,0,376,0,2064]"
+    },
+    {
+      "component": "characteristic_coefficients",
+      "equal_on_collision_pair": true,
+      "value_a": "[0,-8,0,14,0,-4,0,0]",
+      "value_b": "[0,-8,0,14,0,-4,0,0]"
+    },
+    {
+      "component": "component_count",
+      "equal_on_collision_pair": true,
+      "value_a": "1",
+      "value_b": "1"
+    },
+    {
+      "component": "distance_histogram",
+      "equal_on_collision_pair": false,
+      "value_a": "[[1,8],[2,10],[3,5],[4,3],[5,2]]",
+      "value_b": "[[1,8],[2,10],[3,8],[4,2]]"
+    },
+    {
+      "component": "wiener_index",
+      "equal_on_collision_pair": false,
+      "value_a": "65",
+      "value_b": "60"
+    },
+    {
+      "component": "eccentricities",
+      "equal_on_collision_pair": false,
+      "value_a": "[3,3,3,4,4,5,5,5]",
+      "value_b": "[2,3,3,3,3,4,4,4]"
+    },
+    {
+      "component": "spanning_tree_count",
+      "equal_on_collision_pair": true,
+      "value_a": "4",
+      "value_b": "4"
+    },
+    {
+      "component": "local_clustering_multiset",
+      "equal_on_collision_pair": true,
+      "value_a": "[[0,1],[0,1],[0,1],[0,2],[0,2],[0,2],[0,6],[0,12]]",
+      "value_b": "[[0,1],[0,1],[0,1],[0,2],[0,2],[0,2],[0,6],[0,12]]"
+    },
+    {
+      "component": "neighbor_degree_profile",
+      "equal_on_collision_pair": false,
+      "value_a": "[[1,1,2,2],[1,3],[2],[2,2,2],[3,4],[3,4],[4],[4]]",
+      "value_b": "[[1,1,4],[1,2,2,3],[2,2],[2,4],[2,4],[3],[3],[4]]"
+    },
+    {
+      "component": "edge_common_neighbor_profile",
+      "equal_on_collision_pair": true,
+      "value_a": "[0,0,0,0,0,0,0,0]",
+      "value_b": "[0,0,0,0,0,0,0,0]"
+    },
+    {
+      "component": "nonedge_common_neighbor_profile",
+      "equal_on_collision_pair": true,
+      "value_a": "[0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,2,2]",
+      "value_b": "[0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,2,2]"
+    },
+    {
+      "component": "induced4_degree_sequence_profile",
+      "equal_on_collision_pair": false,
+      "value_a": "[[[0,0,0,0],10],[[0,0,1,1],15],[[0,1,1,2],25],[[1,1,1,1],6],[[1,1,1,3],5],[[1,1,2,2],8],[[2,2,2,2],1]]",
+      "value_b": "[[[0,0,0,0],8],[[0,0,1,1],21],[[0,1,1,2],21],[[1,1,1,1],4],[[1,1,1,3],5],[[1,1,2,2],10],[[2,2,2,2],1]]"
+    }
+  ]
+}
