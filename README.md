@@ -1,6 +1,6 @@
 # Counting Revolution: Counting-Based Algebraic and Graph Invariants
 
-> **Research status:** computational exploration of counting-valued invariants. The repository contains finite exhaustive experiment scripts and promising observations, but it does **not** establish a general graph-isomorphism algorithm, super-exponential scaling theorem, or externally validated state-of-the-art benchmark.
+> **Research status:** computational exploration of counting-valued invariants with one provenance-bound exhaustive order-3 magma result and additional exploratory graph/GPU experiments. The repository does **not** establish a general graph-isomorphism algorithm, super-exponential scaling theorem, or externally validated state-of-the-art benchmark.
 
 The central idea is simple: instead of recording only whether a law or pattern is satisfied, record **how often** it is satisfied. This produces richer finite signatures for algebraic structures and graphs.
 
@@ -16,7 +16,37 @@ For a magma `(S, *)`, examples of count-valued features include:
 
 `complete_classifier.py` enumerates all `3^(3^2) = 19,683` binary operations on a 3-element set, canonicalizes them under all relabelings, and searches for a small invariant set that separates the resulting isomorphism classes.
 
-This is a finite exhaustive computation when rerun successfully. The script is designed to write `theorem_results/classifier_results.json`, but that result directory/artifact is not currently committed in the repository. Therefore the historical “3,330/3,330 complete classification” headline should be treated as a **script-reported finite result pending reproducible artifact capture**.
+### Reproducible order-3 result
+
+The order-3 experiment now has a public, provenance-bound evidence bundle at [`benchmarks/publication-evidence/2026-08-24-v47/`](benchmarks/publication-evidence/2026-08-24-v47/).
+
+The artifact independently reconstructs:
+
+- **19,683** labeled binary operations;
+- **3,330** isomorphism classes under `Sym(3)`;
+- parity with the source implementation's canonicalization and 29 invariant fields on all 3,330 canonical classes.
+
+The 29 original invariant fields leave one pair of non-isomorphic classes indistinguishable. The added count-valued invariant
+
+```text
+n_left_square_absorption = |{(x,y) : x*x = x*y}|
+```
+
+takes values **6** and **3** on that unresolved pair.
+
+Within the explicit candidate space consisting of the **29 source invariants plus this one additional invariant**, exhaustive subset search found no complete signature with six or fewer fields and found a complete seven-field signature. One verified witness is:
+
+1. `col_multisets`
+2. `n_lsd_triples`
+3. `left_fixed`
+4. `right_fixed`
+5. `diagonal`
+6. `cube_map_sorted`
+7. `n_left_square_absorption`
+
+The raw 3,330-class table, minimum-search log, deletion test, independent verifier, environment, source hashes, methodology and SHA-256 manifest are committed with the evidence bundle.
+
+**Scope:** this is a finite exhaustive result for binary operations on a 3-element set. “Minimum cardinality 7” means minimum only within the stated 30-field candidate space. It is not a claim of global minimality over all conceivable magma invariants, does not generalize to larger orders, and carries no novelty/priority claim.
 
 ### Scaling claim
 
@@ -37,7 +67,7 @@ The graph scripts combine several isomorphism invariants, including examples suc
 
 If a complete catalog is loaded and the script returns 12,346 distinct signatures with zero collisions, that is a valid **finite computational verification for that exact signature on n=8**. It is not a theorem that the same signature is complete for arbitrary graph order.
 
-The repository currently does not commit a provenance-bound raw run artifact containing the catalog checksum, per-graph signatures/collisions, environment, and independently recomputed summary. The README therefore does not promote the historical “exhaustive proof” wording to an externally verified result.
+The repository currently does not commit a provenance-bound raw n=8 run artifact containing the catalog checksum, per-graph signatures/collisions, environment, and independently recomputed summary. The README therefore does not promote the historical “exhaustive proof” wording to an externally verified n=8 result.
 
 ## Relation to Weisfeiler–Leman
 
@@ -59,8 +89,9 @@ That number is **not currently supported by a committed raw timing artifact** wi
 
 ## What is currently defensible
 
+- the committed order-3 artifact exhaustively reconstructs 3,330 isomorphism classes from all 19,683 labeled binary operations;
+- within its explicit 30-field candidate space, exhaustive search establishes minimum complete-signature cardinality 7 for order 3;
 - counting-valued laws can refine Boolean classifications on finite enumerated structures;
-- small algebraic structures can be exhaustively canonicalized and tested against candidate signatures;
 - combined graph invariants can be collision-tested against complete finite graph catalogs;
 - selected induced-subgraph counts can distinguish graph pairs that simpler invariants may merge;
 - these experiments motivate further study of compact, interpretable structural signatures.
@@ -69,6 +100,8 @@ That number is **not currently supported by a committed raw timing artifact** wi
 
 - a new general graph-isomorphism solution;
 - universal completeness of the listed graph signature;
+- global minimality of the seven-field order-3 signature over all conceivable invariants;
+- completeness for magmas of order greater than 3;
 - super-exponential asymptotic amplification;
 - general strict superiority over Weisfeiler–Leman;
 - publication-grade GPU throughput comparisons;
@@ -76,15 +109,14 @@ That number is **not currently supported by a committed raw timing artifact** wi
 
 ## Reproducibility priorities
 
-For the finite results to become strong public evidence, capture:
+The order-3 magma result is now backed by committed class-level evidence and an independent verifier. For the remaining graph/GPU claims, the next priorities are:
 
-1. exact source commit;
-2. input catalog/data checksums;
-3. environment/package versions;
-4. raw per-instance signatures or sufficient collision logs;
-5. independently recomputed class/collision counts;
-6. raw benchmark timings;
-7. explicit finite scope in every theorem/result statement.
+1. exact source commit and input catalog/data checksums;
+2. environment/package versions;
+3. raw per-instance signatures or sufficient collision logs;
+4. independently recomputed class/collision counts;
+5. raw benchmark timings where performance is claimed;
+6. explicit finite scope in every theorem/result statement.
 
 ## Installation
 
