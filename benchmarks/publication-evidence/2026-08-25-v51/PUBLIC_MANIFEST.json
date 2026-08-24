@@ -1,0 +1,89 @@
+{
+  "artifact_version": "v52-public-preview",
+  "source_capture_version": "v51",
+  "repository": "salihcankurnaz/counting-revolution",
+  "target_branch": "master",
+  "expected_parent_sha": "6dac78defc7614f6d8e534cd78a25ae889e03784",
+  "target_directory": "benchmarks/publication-evidence/2026-08-25-v51",
+  "content_encoding": "UTF-8/ASCII text with canonical LF line endings",
+  "files": [
+    {
+      "path": "CATALOG_ATTRIBUTION.md",
+      "bytes": 585,
+      "sha256": "3a826d20689d43510a28b149aaf1d59a6bf9da702ca807a3c09bca44a67bb379"
+    },
+    {
+      "path": "CLAIM_SAFE_RESULTS.json",
+      "bytes": 1510,
+      "sha256": "84a24b76ee69f078bdb53f859855910be47ba3063bc160c943a71a8220eb1c88"
+    },
+    {
+      "path": "CLAIM_SAFE_RESULTS.md",
+      "bytes": 1780,
+      "sha256": "fd1c23c9b550b2e6f3567b5470afec51cbec9f8ca386376846f0d000adc467e9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4207,
+      "sha256": "4c553b37dbfdff8ba4ac4aec1d53d994f42882177bb8f7f32fbe8a93b51f952a"
+    },
+    {
+      "path": "capture_manifest_v51.json",
+      "bytes": 2130,
+      "sha256": "28cd471d813e371852df2ffab87424e44f1ffc5e35559595e39aee1cabb986ed"
+    },
+    {
+      "path": "catalog_http_metadata.json",
+      "bytes": 593,
+      "sha256": "8f716b98b766c3fa201b80aa30c532a1f0d046bf42b22a4617771dc3a2cddc79"
+    },
+    {
+      "path": "catalog_provenance.json",
+      "bytes": 1166,
+      "sha256": "16904dcfecd13be32b12328bde1fa3f7a7b46cf2924210faa047dc9ffda1fad7"
+    },
+    {
+      "path": "collision_groups.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 418,
+      "sha256": "62eb108cce316ca2180af16a2f97016b7ceffee91c6f7e351a92046539652bfc"
+    },
+    {
+      "path": "graph8.g6",
+      "bytes": 86422,
+      "sha256": "546a249902101c97d3aa590f93e53366854bd0a6f405aa59bdb32d25c57f845a"
+    },
+    {
+      "path": "graph_signatures.csv",
+      "bytes": 6672055,
+      "sha256": "0547a20f63b8299c55b1f5af5ce32c312c8efd2c813210c15930ef9104158717"
+    },
+    {
+      "path": "independent_graph8_verifier_v51.py",
+      "bytes": 29955,
+      "sha256": "38b8768a56b65cd9702d5f29938f06a7382fe691bf93f544b87353ad389dddfb"
+    },
+    {
+      "path": "methodology.json",
+      "bytes": 1969,
+      "sha256": "c70994ec8c669b60f60873017c1369e95b3fedee5e4560ab79efcb55f9462db8"
+    },
+    {
+      "path": "source_provenance.json",
+      "bytes": 775,
+      "sha256": "19852e22d29bd94ff34345e9082113c87e69cfaf200e4b171a52be24c6ef8565"
+    }
+  ],
+  "sanitization": {
+    "contains_absolute_user_paths": false,
+    "contains_tokens_or_private_keys": false,
+    "contains_raw_secrets": false,
+    "contains_third_party_data": true,
+    "third_party_data_attribution_file": "CATALOG_ATTRIBUTION.md",
+    "third_party_data_license": "CC BY 4.0"
+  }
+}

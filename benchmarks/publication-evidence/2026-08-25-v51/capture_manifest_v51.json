@@ -1,0 +1,71 @@
+{
+  "version": "v51",
+  "result": "OK",
+  "files": [
+    {
+      "path": "CATALOG_ATTRIBUTION.md",
+      "bytes": 599,
+      "sha256": "994cecef3749580c13b2671290b7587046533a62838d5e4e579c0c51b4edc11c"
+    },
+    {
+      "path": "catalog_http_metadata.json",
+      "bytes": 609,
+      "sha256": "1f72a2cd7a400a037ea68622ed0eb449be151bbd3449ed9f06cb793f99bc892b"
+    },
+    {
+      "path": "catalog_provenance.json",
+      "bytes": 1194,
+      "sha256": "d379c27241b55cbc297784698c9a816814ffa22b63cfe5002530eb7ce9f22777"
+    },
+    {
+      "path": "CLAIM_SAFE_RESULTS.json",
+      "bytes": 1564,
+      "sha256": "2cee5a7ed8cf0552c5848ae040aff075087f512585e72bd70d0d484a3f036f95"
+    },
+    {
+      "path": "CLAIM_SAFE_RESULTS.md",
+      "bytes": 1828,
+      "sha256": "74c86523fb444484d3e8256aa82b1748121a00210cac143d7589a1f191f629fc"
+    },
+    {
+      "path": "collision_groups.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 427,
+      "sha256": "751f5bdf9355d392210ef08ce1206ce07db467608162ad1991d18c4527718ad6"
+    },
+    {
+      "path": "graph8.g6",
+      "bytes": 86422,
+      "sha256": "546a249902101c97d3aa590f93e53366854bd0a6f405aa59bdb32d25c57f845a"
+    },
+    {
+      "path": "graph_signatures.csv",
+      "bytes": 6684402,
+      "sha256": "bf263acca57ff85c8eabbcd329934d333fab86b81beef0b86908bacb3f520249"
+    },
+    {
+      "path": "independent_graph8_verifier_v51.py",
+      "bytes": 29955,
+      "sha256": "38b8768a56b65cd9702d5f29938f06a7382fe691bf93f544b87353ad389dddfb"
+    },
+    {
+      "path": "source_provenance.json",
+      "bytes": 795,
+      "sha256": "eafa74c66eaa1da1723bd6e9be93242ccee275a89cdabc4a5742ca7bb8dd74af"
+    },
+    {
+      "path": "source_snapshot/graph_classification_proof.py",
+      "bytes": 8256,
+      "sha256": "ceefd4aae6565f820011f587c35c80d0e9bc5749009eaee53edfdaaa8f7ea23c"
+    },
+    {
+      "path": "source_snapshot/graph_n8_exhaustive.py",
+      "bytes": 9157,
+      "sha256": "dbc8425cbeb513b2d2f188685b823447b7061ac67a04cc81a6d93f944947ba87"
+    }
+  ]
+}

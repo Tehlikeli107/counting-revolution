@@ -1,0 +1,44 @@
+{
+  "artifact_version": "v52-public-preview",
+  "source_capture_version": "v51",
+  "experiment": "order-8 simple-graph counting-signature exhaustive catalog validation",
+  "repository": "salihcankurnaz/counting-revolution",
+  "repository_id": 1193202490,
+  "branch": "master",
+  "source_commit": "6dac78defc7614f6d8e534cd78a25ae889e03784",
+  "source_file": "graph_n8_exhaustive.py",
+  "source_git_blob": "8ddf73479a7653bed7b7a93beada9f364d57c9dd",
+  "input_catalog": {
+    "name": "Brendan McKay graph8.g6",
+    "url": "https://users.cecs.anu.edu.au/~bdm/data/graph8.g6",
+    "catalog_index": "https://users.cecs.anu.edu.au/~bdm/data/graphs.html",
+    "license_page": "https://users.cecs.anu.edu.au/~bdm/data/",
+    "license": "CC BY 4.0, except where otherwise indicated by the collection",
+    "bytes": 86422,
+    "sha256": "546a249902101c97d3aa590f93e53366854bd0a6f405aa59bdb32d25c57f845a",
+    "graphs": 12346,
+    "connected_graphs": 11117
+  },
+  "verification": {
+    "independent_graph6_decoder_vs_networkx_roundtrip_all_graphs": 12346,
+    "source_vs_independent_signature_parity_all_graphs": 12346,
+    "exact_integer_vs_source_spanning_tree_parity_all_graphs": 12346,
+    "deterministic_relabeling_invariance_checks": 24692,
+    "order4_subgraph_typing_labeled_graphs_checked": 64,
+    "order4_subgraph_typing_isomorphism_classes": 11,
+    "raw_signature_rows": 12346,
+    "distinct_full_signatures": 12346,
+    "collision_groups": 0
+  },
+  "claim_scope": {
+    "supported": "On Brendan McKay's complete catalog of 12,346 non-isomorphic simple graphs on 8 vertices, the exact tested counting signature is collision-free.",
+    "not_claimed": [
+      "classification completeness for n > 8",
+      "a general polynomial-time graph-isomorphism solution",
+      "an asymptotic theorem",
+      "novelty or priority",
+      "state-of-the-art performance"
+    ]
+  },
+  "line_endings": "All public text/CSV payloads are canonicalized to LF before hashing/staging."
+}

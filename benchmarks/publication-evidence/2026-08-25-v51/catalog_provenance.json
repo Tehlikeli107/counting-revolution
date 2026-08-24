@@ -1,0 +1,29 @@
+{
+  "source": "Brendan McKay combinatorial data collection",
+  "catalog_url": "https://users.cecs.anu.edu.au/~bdm/data/graph8.g6",
+  "catalog_index_url": "https://users.cecs.anu.edu.au/~bdm/data/graphs.html",
+  "collection_license_url": "https://users.cecs.anu.edu.au/~bdm/data/",
+  "license_as_stated_by_collection_page": "CC BY 4.0, except where otherwise indicated",
+  "download": {
+    "requested_url": "https://users.cecs.anu.edu.au/~bdm/data/graph8.g6",
+    "final_url": "https://users.cecs.anu.edu.au/~bdm/data/graph8.g6",
+    "http_status": 200,
+    "headers": {
+      "Server": "nginx",
+      "Date": "Mon, 24 Aug 2026 21:58:21 GMT",
+      "Content-Length": "86422",
+      "Connection": "close",
+      "Last-Modified": "Sun, 05 Aug 2001 12:30:43 GMT",
+      "ETag": "\"15196-38ac78fa1c2c0\"",
+      "Accept-Ranges": "bytes"
+    },
+    "bytes": 86422,
+    "sha256": "546a249902101c97d3aa590f93e53366854bd0a6f405aa59bdb32d25c57f845a",
+    "git_blob_sha1": "67e9f9be82bff572c716effd897eed60138d2cfb"
+  },
+  "graph_data_lines": 12346,
+  "header_lines": [],
+  "blank_lines": 0,
+  "unique_graph6_strings": 12346,
+  "expected_nonisomorphic_graphs_order_8": 12346
+}
