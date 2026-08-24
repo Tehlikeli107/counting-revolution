@@ -1,6 +1,6 @@
 # Counting Revolution: Counting-Based Algebraic and Graph Invariants
 
-> **Research status:** computational exploration of counting-valued invariants with provenance-bound exhaustive finite results for order-3 magmas and order-8 simple graphs, including an exact top-level component-minimality analysis for the validated order-8 signature. The repository does **not** establish a general graph-isomorphism algorithm, super-exponential scaling theorem, or externally validated state-of-the-art benchmark.
+> **Research status:** computational exploration of counting-valued invariants with provenance-bound exhaustive finite results for order-3 magmas and order-8/order-9 simple graphs. The repository includes exact top-level component-minimality analyses for the validated order-8 and order-9 graph signatures. It does **not** establish a general graph-isomorphism algorithm, an asymptotic scaling theorem, or an externally validated state-of-the-art benchmark.
 
 The central idea is simple: instead of recording only whether a law or pattern is satisfied, record **how often** it is satisfied. This produces richer finite signatures for algebraic structures and graphs.
 
@@ -44,8 +44,6 @@ Within the explicit candidate space consisting of the **29 source invariants plu
 6. `cube_map_sorted`
 7. `n_left_square_absorption`
 
-The raw 3,330-class table, minimum-search log, deletion test, independent verifier, environment, source hashes, methodology and SHA-256 manifest are committed with the evidence bundle.
-
 **Scope:** this is a finite exhaustive result for binary operations on a 3-element set. “Minimum cardinality 7” means minimum only within the stated 30-field candidate space. It is not a claim of global minimality over all conceivable magma invariants, does not generalize to larger orders, and carries no novelty/priority claim.
 
 ### Scaling claim
@@ -67,14 +65,12 @@ The graph scripts combine several isomorphism invariants, including examples suc
 
 The order-8 experiment has a public, provenance-bound evidence bundle at [`benchmarks/publication-evidence/2026-08-25-v51/`](benchmarks/publication-evidence/2026-08-25-v51/).
 
-Using Brendan McKay's complete catalog of **12,346 non-isomorphic simple graphs on 8 vertices**, the exact tested signature produced:
+Using Brendan McKay's complete catalog of **12,346 non-isomorphic simple graphs on 8 vertices**, the exact tested full signature produced:
 
 - **12,346** catalog graphs;
 - **11,117** connected catalog graphs;
 - **12,346** distinct full signatures;
 - **0** collision groups.
-
-The capture records the exact `graph8.g6` input (`86,422` bytes, SHA-256 `546a249902101c97d3aa590f93e53366854bd0a6f405aa59bdb32d25c57f845a`) and includes attribution/provenance for the McKay catalog.
 
 Independent validation in V51 additionally performed:
 
@@ -82,15 +78,13 @@ Independent validation in V51 additionally performed:
 - source-vs-independent full-signature parity for **12,346/12,346** graphs;
 - exact-integer Matrix-Tree spanning-tree parity for **12,346/12,346** graphs;
 - **24,692** deterministic relabeling-invariance checks;
-- an exhaustive 64-labeled-graph sanity check showing that the degree-sequence key used by the induced-4 component distinguishes all 11 simple-graph isomorphism types on four vertices.
+- an exhaustive 64-labeled-graph sanity check for the induced-4 component's order-4 typing.
 
-The evidence directory contains the complete raw 12,346-row signature table, exact empty collision-group record, captured catalog bytes, independent verifier, source/environment/catalog provenance, methodology and SHA-256 manifest.
-
-**Scope:** the supported statement is that the exact tested counting signature is collision-free on McKay's complete catalog of non-isomorphic simple graphs on **8 vertices**. This is a finite exhaustive order-8 result. It does **not** establish completeness for `n > 8`, a general graph-isomorphism algorithm, an asymptotic theorem, or a novelty/priority claim.
+**Scope:** this is a finite exhaustive order-8 result. It does not by itself establish completeness at larger graph orders, a general graph-isomorphism algorithm, an asymptotic theorem, or a novelty/priority claim.
 
 ### Reproducible order-8 top-level component minimality
 
-A second public evidence bundle at [`benchmarks/publication-evidence/2026-08-25-v54/`](benchmarks/publication-evidence/2026-08-25-v54/) analyzes how many of the **13 top-level components** of the validated V51 signature are actually needed on the same 12,346-graph catalog.
+A second public evidence bundle at [`benchmarks/publication-evidence/2026-08-25-v54/`](benchmarks/publication-evidence/2026-08-25-v54/) analyzes how many of the **13 top-level components** of the validated V51 signature are needed on the same 12,346-graph catalog.
 
 V54 exhaustively checks every subset of cardinality 1, 2 and 3:
 
@@ -100,7 +94,7 @@ V54 exhaustively checks every subset of cardinality 1, 2 and 3:
 | 2 | 78 | 0 |
 | 3 | 286 | 13 |
 
-Therefore the minimum complete-signature cardinality is **3 within this explicit 13-component top-level search space**. The best two-component signatures still produce only **12,345 / 12,346** distinct signatures and leave one unresolved pair (catalog indices 266 and 348).
+Therefore the minimum complete-signature cardinality is **3 within this explicit 13-component top-level search space**.
 
 One compact representative complete triple is:
 
@@ -108,11 +102,55 @@ One compact representative complete triple is:
 2. `wiener_index`
 3. `local_clustering_multiset`
 
-This representative produces **12,346 / 12,346** distinct reduced signatures. Among the 13 complete triples, it has the smallest mean compact-JSON serialized length on the committed V51 table: about **84.9 characters per graph** (median 85, maximum 102). That criterion is only a compact-representation choice; it does not establish minimum runtime, minimum optimized encoding size, or mathematical optimality beyond the stated 13 top-level components.
+It produces **12,346 / 12,346** distinct reduced signatures on the complete order-8 catalog.
 
-The V54 evidence directory contains all 377 tested subsets, all 13 complete triples, deletion tests, the best-pair collision record, component-partition equivalences, the independent verifier and a 12,346-row reduced-signature table for the representative triple.
+**Scope:** “minimum cardinality 3” means minimum only among the 13 top-level V51 signature components on the complete order-8 catalog. It is not a global minimum over component subfeatures or arbitrary graph invariants.
 
-**Scope:** “minimum cardinality 3” means minimum only among the 13 top-level V51 signature components on the complete order-8 catalog. It is not a global minimum over component subfeatures or arbitrary graph invariants, and it does not extend the completeness statement to `n > 8`.
+### Reproducible order-9 top-level component minimality
+
+The order-9 minimum-cardinality experiment has a public, provenance-bound evidence bundle at [`benchmarks/publication-evidence/2026-08-25-v59/`](benchmarks/publication-evidence/2026-08-25-v59/).
+
+Using Brendan McKay's complete catalog of **274,668 non-isomorphic simple graphs on 9 vertices** (**261,080** connected), V59 independently recomputed all 13 top-level components and exhaustively searched every subset through the first complete cardinality:
+
+| Cardinality | Subsets checked | Best distinct signatures | Complete subsets |
+|---:|---:|---:|---:|
+| 1 | 13 | 247,357 / 274,668 | 0 |
+| 2 | 78 | 274,034 / 274,668 | 0 |
+| 3 | 286 | 274,664 / 274,668 | 0 |
+| 4 | 715 | 274,668 / 274,668 | 6 |
+
+Therefore the minimum complete-signature cardinality is **4 within the exact 13 top-level component space on the complete order-9 catalog**.
+
+One representative minimum witness is:
+
+1. `characteristic_coefficients`
+2. `spanning_tree_count`
+3. `local_clustering_multiset`
+4. `neighbor_degree_profile`
+
+It is collision-free on **274,668 / 274,668** catalog graphs.
+
+V59 also records:
+
+- all **1,092** tested subsets of cardinality 1–4;
+- all **6** complete four-component witnesses;
+- **24/24** deletion tests becoming incomplete after removal of one component;
+- the exact counterexamples left by the strongest three-component signatures;
+- **3,215** independent-vs-source full-signature parity checks;
+- reconstruction of the earlier order-9 failure of the order-8 representative triple: **458 collision groups / 917 members**.
+
+The order-8 representative triple therefore does **not** remain complete at order 9. The order-9 evidence shows that an additional structural component is necessary within this 13-component family, but the successful minimum witness is not required to contain the exact order-8 representative triple.
+
+**Scope:** “minimum cardinality 4” means minimum only among the exact 13 top-level component definitions on McKay's complete order-9 catalog. It is not a minimum over their internal subfeatures or arbitrary graph invariants, and it does not establish completeness for `n > 9`.
+
+### Finite order-8 vs order-9 observation
+
+Within the same explicit 13-component family, the finite exhaustive minimum changes from:
+
+- **order 8:** minimum top-level cardinality **3**;
+- **order 9:** minimum top-level cardinality **4**.
+
+This is a concrete two-order finite observation, not evidence of a monotone or asymptotic growth law. No extrapolation to order 10 or beyond is claimed.
 
 ## Relation to Weisfeiler–Leman
 
@@ -122,9 +160,7 @@ A successful separation of one or more WL-hard pairs is a **finite witness**, no
 
 ## Relation to graph reconstruction
 
-Subgraph counts are deeply connected to graph-isomorphism and reconstruction theory. However, the general Graph Reconstruction Conjecture remains open: even whether the multiset of all `(n-1)`-vertex-deleted subgraphs determines every finite simple graph is not settled in full generality.
-
-Accordingly, this repository makes no claim that a small fixed collection of polynomial-time counts solves graph isomorphism or reconstruction in general.
+Subgraph counts are deeply connected to graph-isomorphism and reconstruction theory. However, the general Graph Reconstruction Conjecture remains open. Accordingly, this repository makes no claim that a small fixed collection of polynomial-time counts solves graph isomorphism or reconstruction in general.
 
 ## GPU benchmark status
 
@@ -134,23 +170,25 @@ That number is **not currently supported by a committed raw timing artifact** wi
 
 ## What is currently defensible
 
-- the committed order-3 artifact exhaustively reconstructs 3,330 isomorphism classes from all 19,683 labeled binary operations;
-- within its explicit 30-field candidate space, exhaustive search establishes minimum complete-signature cardinality 7 for order 3;
-- the committed order-8 graph artifact evaluates the exact tested signature on all 12,346 non-isomorphic simple graphs in McKay's complete order-8 catalog and finds 12,346 distinct signatures with zero collisions;
-- the order-8 source signature matches an independent implementation on all catalog graphs, with exact spanning-tree and relabeling cross-checks;
-- within the 13 top-level components of that validated order-8 signature, exhaustive subset search establishes minimum collision-free cardinality 3 and identifies 13 complete triples;
-- the representative reduced triple `characteristic_coefficients + wiener_index + local_clustering_multiset` remains collision-free on all 12,346 catalog graphs;
+- the committed order-3 artifact exhaustively reconstructs **3,330** isomorphism classes from all **19,683** labeled binary operations;
+- within its explicit 30-field candidate space, exhaustive search establishes minimum complete-signature cardinality **7** for order 3;
+- the committed order-8 graph artifact evaluates the exact tested full signature on all **12,346** non-isomorphic simple graphs in McKay's complete order-8 catalog and finds zero collisions;
+- within the 13 top-level components of the order-8 signature, exhaustive subset search establishes minimum collision-free cardinality **3** and identifies **13** complete triples;
+- the committed order-9 artifact evaluates the same top-level component family on all **274,668** non-isomorphic simple graphs in McKay's complete order-9 catalog;
+- within those 13 top-level components, exhaustive search through cardinality 4 establishes order-9 minimum collision-free cardinality **4** and identifies **6** complete four-component witnesses;
+- the strongest order-9 three-component signatures reach **274,664 / 274,668**, so cardinality 3 is insufficient in that explicit search space;
+- the order-8 minimum-3 and order-9 minimum-4 values are finite empirical facts for these two complete catalogs, not an asymptotic law;
 - counting-valued laws can refine Boolean classifications on finite enumerated structures;
-- selected induced-subgraph counts can distinguish graph pairs that simpler invariants may merge;
 - these finite experiments motivate further study of compact, interpretable structural signatures.
 
 ## What is not established here
 
 - a new general graph-isomorphism solution;
-- completeness of the listed graph signature for orders greater than 8;
-- global minimality of the three-component order-8 signature over component subfeatures or arbitrary graph invariants;
+- completeness of these graph signatures for orders greater than 9;
+- global minimality of the order-8 or order-9 signatures over component subfeatures or arbitrary graph invariants;
 - global minimality of the seven-field order-3 signature over all conceivable invariants;
 - completeness for magmas of order greater than 3;
+- monotone or asymptotic growth of minimum signature cardinality with graph order;
 - super-exponential asymptotic amplification;
 - general strict superiority over Weisfeiler–Leman;
 - publication-grade GPU throughput comparisons;
@@ -158,11 +196,11 @@ That number is **not currently supported by a committed raw timing artifact** wi
 
 ## Reproducibility priorities
 
-The order-3 magma result, order-8 full-signature result and order-8 top-level component-minimality result are now backed by committed raw evidence and independent verifiers. Remaining priorities are:
+The order-3 magma result, order-8 graph result, order-8 top-level minimality result, and order-9 top-level minimality result are backed by committed raw evidence and independent verifiers. Remaining priorities are:
 
-1. reproduce and artifact additional finite graph-order experiments before extending any completeness statement;
-2. test the reduced three-component witnesses on larger complete catalogs where feasible and on carefully chosen adversarial graph families;
-3. decompose the three selected top-level components into finer subfeatures and study whether smaller claim-safe finite signatures exist;
+1. test order 10 on a complete catalog only if the computational/storage cost remains tractable, otherwise use explicitly scoped adversarial/sampled families;
+2. decompose the successful order-8/order-9 top-level components into finer subfeatures and study whether smaller claim-safe finite signatures exist;
+3. characterize the exact order-9 counterexamples left by the strongest three-component signatures and compare their structural commonalities;
 4. capture raw GPU benchmark timings with exact hardware/software, warmup, repetition and correctness protocols before making performance claims;
 5. keep every theorem/result statement explicitly scoped to the finite population actually tested.
 
