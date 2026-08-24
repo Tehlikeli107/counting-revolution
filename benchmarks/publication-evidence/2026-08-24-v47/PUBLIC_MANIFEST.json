@@ -1,15 +1,17 @@
 {
-  "artifact_version": "v48-public-preview",
+  "artifact_version": "v49.2-remote-canonical",
   "source_capture_version": "v47",
   "repository": "salihcankurnaz/counting-revolution",
   "target_branch": "master",
-  "expected_head_sha": "ed406102a6d048ae3805c48eabecd456f503bcc1",
+  "source_parent_sha": "ed406102a6d048ae3805c48eabecd456f503bcc1",
+  "publication_commit_sha": "7ed83028d83f2ee21ae49d7674fc8ff9b9098484",
   "target_directory": "benchmarks/publication-evidence/2026-08-24-v47",
+  "content_encoding": "UTF-8 text; Git-canonical LF line endings",
   "files": [
     {
       "path": "CLAIM_SAFE_RESULTS.json",
-      "bytes": 1516,
-      "sha256": "e0481fc12230ee9fd054aa6275ebf2c7ea219a8d1ebd7e50d1c5ec2ad80beec5"
+      "bytes": 1483,
+      "sha256": "faed4ccb24d16fdde1a685f194b520c9af1cced2c5889525eedebc6417adc1aa"
     },
     {
       "path": "README.md",
@@ -18,13 +20,13 @@
     },
     {
       "path": "candidate_invariance_argument.md",
-      "bytes": 598,
-      "sha256": "339a6557190a6e5f1f6d44d53559c6965a7760c5e29e5298a9e7440764fd6954"
+      "bytes": 579,
+      "sha256": "25ebe8b583141f7418804b87c76ebba7312bd07985fd69d80a265ab1d82ce27a"
     },
     {
       "path": "environment.json",
-      "bytes": 250,
-      "sha256": "1cf3b6e38bc60363d5ae09c4fe054040b7289768e8fc12c82dc11b737485bd5e"
+      "bytes": 244,
+      "sha256": "4e6ced5726aecd5a9950fc5342c5f6f9cca588b2cf18d2ea82344fcb0989e118"
     },
     {
       "path": "independent_minimality_verifier_v47.py",
@@ -38,23 +40,23 @@
     },
     {
       "path": "minimal_signature_classes.csv",
-      "bytes": 323619,
-      "sha256": "0d6ac0c755e63aed6ebe448d7be033eed6ae075e4ac306bbafc40f23689b2fe4"
+      "bytes": 320288,
+      "sha256": "d059a1c381a0ee9100619550794dfc82eeecfea74ad949014e050d187a82b4e4"
     },
     {
       "path": "minimum_search.csv",
-      "bytes": 217,
-      "sha256": "df342b01b2cd4c133db99dc75a502678d0db07c5895f66426626e22892baabac"
+      "bytes": 209,
+      "sha256": "727974a9ddfd01ffbfee82979ccd27d89cbf01e83772296dbdb88e5ddc590880"
     },
     {
       "path": "partition_equivalences.json",
-      "bytes": 300,
-      "sha256": "596330af801eef76c8ca27e90b211ddb9d8dbf70bc1b24272bb3ce5ccbdaebf7"
+      "bytes": 283,
+      "sha256": "88110fa828d7b898e35ac028e59dfb0f2fa705164f9b0b09a079eea3e3f30d74"
     },
     {
       "path": "selected_signature_deletion_test.csv",
-      "bytes": 244,
-      "sha256": "fb3f67494e47a5f65f561fc1de570748e0d08d2910a1d6ef385fbc5a773d7dba"
+      "bytes": 236,
+      "sha256": "52da428708efbc155fb68c59e8e990c931fc9fe372c91e061931c4dbb4bf34f9"
     },
     {
       "path": "source_hashes.json",
@@ -67,5 +69,6 @@
     "contains_absolute_user_paths": false,
     "contains_tokens_or_private_keys": false,
     "contains_raw_secrets": false
-  }
+  },
+  "note": "V49.1 was committed from Windows. Git normalized CRLF to LF for seven text/CSV payloads. This manifest records SHA-256 and byte counts for the canonical bytes stored in Git, rather than the pre-index working-tree bytes."
 }
