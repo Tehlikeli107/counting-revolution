@@ -1,0 +1,44 @@
+{
+  "artifact_version": "v48-public-preview",
+  "source_capture_version": "v47",
+  "experiment": "order-3 magma exhaustive signature cardinality search",
+  "repository": "salihcankurnaz/counting-revolution",
+  "branch": "master",
+  "source_commit": "ed406102a6d048ae3805c48eabecd456f503bcc1",
+  "population": {
+    "set_size": 3,
+    "labeled_binary_operations": 19683,
+    "isomorphism_group": "Sym(3)",
+    "permutations_checked_per_operation": 6,
+    "isomorphism_classes": 3330
+  },
+  "search_space": {
+    "original_source_invariants": 29,
+    "additional_invariant": "n_left_square_absorption",
+    "additional_definition": "count ordered pairs (x,y) satisfying x*x = x*y",
+    "total_candidate_fields": 30,
+    "unique_original_induced_partitions": 26,
+    "candidate_is_mandatory_within_search_space": true
+  },
+  "minimum_search": {
+    "method": "exhaustive subset search over unique original partitions with the mandatory candidate field",
+    "no_solution_total_cardinality_through": 6,
+    "first_complete_cardinality": 7,
+    "all_size_7_solutions_enumerated": false,
+    "first_size_7_solution_only": true
+  },
+  "verification": {
+    "independent_canonicalization": true,
+    "original_canonical_form_parity_all_3330_classes": true,
+    "original_compute_invariants_parity_all_3330_classes": true,
+    "raw_class_level_signatures_committed": true,
+    "single_feature_deletion_test": true
+  },
+  "claim_limits": [
+    "finite order-3 result only",
+    "minimum only within the explicit 30-field candidate space",
+    "no global minimum over all conceivable invariants",
+    "no novelty or priority claim",
+    "no asymptotic claim"
+  ]
+}

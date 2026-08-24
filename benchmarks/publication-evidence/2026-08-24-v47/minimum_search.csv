@@ -1,0 +1,8 @@
+﻿candidate_included,old_partition_count,total_feature_count,subsets_tested,complete_subsets_found
+True,0,1,1,0
+True,1,2,26,0
+True,2,3,325,0
+True,3,4,2600,0
+True,4,5,14950,0
+True,5,6,65780,0
+True,6,7,19519,1

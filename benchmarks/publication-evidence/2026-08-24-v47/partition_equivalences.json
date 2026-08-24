@@ -1,0 +1,18 @@
+{
+  "original_invariant_count": 29,
+  "unique_original_partitions": 26,
+  "equivalent_partition_groups": [
+    [
+      "n_idempotent",
+      "sq_fixed_points"
+    ],
+    [
+      "n_commuting",
+      "n_anticommuting"
+    ],
+    [
+      "output_freq",
+      "cayley_indeg"
+    ]
+  ]
+}

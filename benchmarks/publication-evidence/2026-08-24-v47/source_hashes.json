@@ -1,0 +1,15 @@
+{
+  "repository": "salihcankurnaz/counting-revolution",
+  "branch": "master",
+  "source_commit": "ed406102a6d048ae3805c48eabecd456f503bcc1",
+  "files": {
+    "complete_classifier.py": {
+      "git_blob_sha": "7f295b6dd5c08db2a9914d6e1b3d182ca058fd7e",
+      "sha256": "d350aeffa193946e63b672ce2a4bf5e1ebfca2140311ed6803d64c1ee32a2870"
+    }
+  },
+  "source_capture": {
+    "v47_result_zip_sha256": "eb6542399c75f8798b054a13f5c466f95677b31ccf8e106b9fb3712ebed9020c",
+    "uploaded_capture_filename": "V47_COUNTING_REVOLUTION_MAGMA_MINIMALITY_20260824_234854.zip"
+  }
+}
