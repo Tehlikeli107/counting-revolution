@@ -1,137 +1,99 @@
-# Counting Revolution: From Boolean to Counting Algebraic Invariants
+# Counting Revolution: Counting-Based Algebraic and Graph Invariants
 
-Two related discoveries showing that **counting how many tuples satisfy a law** reveals exponentially more structure than **boolean "does every tuple satisfy it?"**
+> **Research status:** computational exploration of counting-valued invariants. The repository contains finite exhaustive experiment scripts and promising observations, but it does **not** establish a general graph-isomorphism algorithm, super-exponential scaling theorem, or externally validated state-of-the-art benchmark.
 
----
+The central idea is simple: instead of recording only whether a law or pattern is satisfied, record **how often** it is satisfied. This produces richer finite signatures for algebraic structures and graphs.
 
-## Discovery 1: Magma Classification
+## Experiment family 1: binary operations on small sets
 
-### The Problem
-Standard algebraic classification uses **boolean properties**: commutativity, associativity, idempotency, etc. For a magma (S, *) on 3 elements, boolean laws classify only **114** equivalence classes out of **3,330** true isomorphism classes — capturing just 3.4%.
+For a magma `(S, *)`, examples of count-valued features include:
 
-### The Insight
-Replace boolean satisfaction with **counting satisfaction**:
-- Boolean: `forall a,b,c: a*(b*c) == (a*b)*c ?` → True/False
-- Counting: `how many triples (a,b,c) satisfy a*(b*c) == (a*b)*c?` → integer in [0, |S|^3]
+- number of associative triples;
+- number of commuting pairs;
+- identity/zero/idempotency counts;
+- alternative/flexibility counts;
+- selected sorted maps or multisets derived from the operation table.
 
-### Results
+`complete_classifier.py` enumerates all `3^(3^2) = 19,683` binary operations on a 3-element set, canonicalizes them under all relabelings, and searches for a small invariant set that separates the resulting isomorphism classes.
 
-| |S| | Boolean classes | Counting classes | Iso classes | Amplification |
-|------|----------------|-----------------|-------------|---------------|
-| 2    | 10             | 10              | 10          | **1.0x**      |
-| 3    | 114            | 3,328           | 3,330       | **29.2x**     |
-| 4    | 42 (sampled)   | 499,326         | ~500,000    | **11,889x**   |
+This is a finite exhaustive computation when rerun successfully. The script is designed to write `theorem_results/classifier_results.json`, but that result directory/artifact is not currently committed in the repository. Therefore the historical “3,330/3,330 complete classification” headline should be treated as a **script-reported finite result pending reproducible artifact capture**.
 
-Super-exponential scaling: amplification grows as |S| increases.
+### Scaling claim
 
-### Complete Classification for |S|=3
+Historical versions of this README described the amplification from Boolean to counting signatures as **super-exponential** based on experiments at very small set sizes. That asymptotic claim is not established by the current evidence. Finite increases at `|S|=2,3,4` can motivate a scaling hypothesis, but they do not prove an asymptotic growth law.
 
-9 counting invariants + 1 sorted invariant = **100% classification** of all 3,330 isomorphism classes:
-1. Associativity count
-2. Commutativity count
-3. Left identity count
-4. Right identity count
-5. Left zero count
-6. Right zero count
-7. Idempotency count
-8. Left alternative count
-9. Right alternative count
-10. Cubing map (sorted invariant): `{x * (x*x) : x in S}` multiset
+## Experiment family 2: graph signatures
 
-The only obstacle to 9 invariants: 2 "stubborn pairs" that are **anti-isomorphic** (mirror images of each other). Chirality is the sole obstacle.
+The graph scripts combine several isomorphism invariants, including examples such as:
 
-```bash
-python counting_vs_boolean.py     # Main comparison
-python counting_scaling.py        # Scaling across |S|=2,3,4
-python complete_classifier.py     # 100% classification for |S|=3
-python stubborn_pairs.py          # Chirality analysis
-```
+- degree sequences;
+- closed-walk traces / characteristic-polynomial information;
+- component and distance statistics;
+- spanning-tree counts;
+- local neighborhood statistics;
+- induced 4-vertex pattern summaries.
 
----
+`graph_n8_exhaustive.py` is designed to download Brendan McKay's catalog of all 12,346 non-isomorphic graphs on 8 vertices, compute the combined signature for each graph, and check for collisions.
 
-## Discovery 2: Graph Counting Classification
+If a complete catalog is loaded and the script returns 12,346 distinct signatures with zero collisions, that is a valid **finite computational verification for that exact signature on n=8**. It is not a theorem that the same signature is complete for arbitrary graph order.
 
-### The Problem
-Graph isomorphism testing is a famously hard problem. The Weisfeiler-Leman (WL) test is a standard polynomial-time heuristic, but it fails on many graph pairs (e.g., Shrikhande vs Rook(4)).
+The repository currently does not commit a provenance-bound raw run artifact containing the catalog checksum, per-graph signatures/collisions, environment, and independently recomputed summary. The README therefore does not promote the historical “exhaustive proof” wording to an externally verified result.
 
-### The Discovery
-**12 polynomial-time counting invariants achieve COMPLETE classification for all n <= 8:**
+## Relation to Weisfeiler–Leman
 
-1. Degree sequence (sorted)
-2. Traces of A^k for k = 1..n (closed walk counts)
-3. Characteristic polynomial coefficients
-4. Number of connected components
-5. Distance histogram
-6. Wiener index
-7. Number of spanning trees (Kirchhoff's theorem)
-8. **4-vertex induced subgraph counts** (key ingredient!)
+A specific pair can witness that one invariant family distinguishes graphs that 1-WL does not. The Shrikhande graph and the 4×4 rook graph are a standard difficult pair for color refinement, and the repository explores additional counts on such examples.
 
-### Results — Exhaustive Proof
+A successful separation of one or more WL-hard pairs is a **finite witness**, not a general statement that the full counting signature is strictly stronger than WL on every graph family or every dimension.
 
-| n | Labeled graphs | Iso classes (OEIS A000088) | Counting signatures | Match |
-|---|---------------|---------------------------|-------------------|-------|
-| 4 | 64            | 11                        | 11                | YES   |
-| 5 | 1,024         | 34                        | 34                | YES   |
-| 6 | 32,768        | 156                       | 156               | YES   |
-| 7 | 2,097,152     | 1,044                     | 1,044             | YES   |
-| 8 | McKay catalog | 12,346                    | 12,346            | YES   |
+## Relation to graph reconstruction
 
-**Strictly stronger than WL-1**: Distinguishes Shrikhande vs Rook(4,4) which WL-1 cannot.
+Subgraph counts are deeply connected to graph-isomorphism and reconstruction theory. However, the general Graph Reconstruction Conjecture remains open: even whether the multiset of all `(n-1)`-vertex-deleted subgraphs determines every finite simple graph is not settled in full generality.
 
-**Complexity**: O(n^4) — fully polynomial time.
+Accordingly, this repository makes no claim that a small fixed collection of polynomial-time counts solves graph isomorphism or reconstruction in general.
 
-**First failure**: Paley(9) vs L(3,3) at n=9 — these two strongly regular graphs defeat counting invariants.
+## GPU benchmark status
 
-```bash
-python graph_classification_proof.py   # n=7 exhaustive proof (1044/1044)
-python graph_n8_exhaustive.py          # n=8 proof via McKay catalog (12,346/12,346)
-python gpu_fingerprinter.py            # GPU batch fingerprinting: 2.88M graphs/sec
-```
+`gpu_fingerprinter.py` explores batch GPU calculation of graph features. Historical README versions reported approximately `2.88M graphs/sec` for an n=8 batch.
 
-### GPU Fingerprinting Benchmark
+That number is **not currently supported by a committed raw timing artifact** with exact hardware, software versions, warmup protocol, repetitions, raw timings, and correctness output. It should be treated as a historical local measurement rather than a reproducible benchmark claim.
 
-Batch-parallel GPU computation of all 8 invariant types simultaneously:
+## What is currently defensible
 
-| Batch | GPU time | Throughput | Correctness |
-|-------|----------|------------|-------------|
-| 12,346 graphs (n=8) | 4.3ms | **2.88M graphs/sec** | 12,346/12,346 ✓ |
+- counting-valued laws can refine Boolean classifications on finite enumerated structures;
+- small algebraic structures can be exhaustively canonicalized and tested against candidate signatures;
+- combined graph invariants can be collision-tested against complete finite graph catalogs;
+- selected induced-subgraph counts can distinguish graph pairs that simpler invariants may merge;
+- these experiments motivate further study of compact, interpretable structural signatures.
 
-vs gSWORD (state of art, 2024): ~1M approximate samples/sec
+## What is not established here
 
----
+- a new general graph-isomorphism solution;
+- universal completeness of the listed graph signature;
+- super-exponential asymptotic amplification;
+- general strict superiority over Weisfeiler–Leman;
+- publication-grade GPU throughput comparisons;
+- priority/novelty claims for counting law-satisfaction values without a dedicated literature review.
 
-## Key Theorems
+## Reproducibility priorities
 
-**Theorem 1 (Magma Counting)**: For |S|=3, the 10-dimensional counting signature vector completely classifies all 3,330 isomorphism classes of binary operations on a 3-element set. The two anti-isomorphic pairs are distinguished by the cubing map multiset.
+For the finite results to become strong public evidence, capture:
 
-**Theorem 2 (Amplification)**: The number of distinct counting signatures grows super-exponentially faster than boolean classification. Amplification at |S|=4 is at least 11,889x.
-
-**Theorem 3 (Graph Counting)**: The 12 polynomial-time invariants listed above form a complete set of graph isomorphism invariants for n <= 8. This is proven exhaustively by generating all non-isomorphic graphs (verified against OEIS A000088 and McKay's catalog).
-
-**Theorem 4 (WL Separation)**: The counting invariant set strictly extends WL-1: it correctly distinguishes the Shrikhande graph and Rook(4,4) graph (both 4-regular on 16 vertices, WL-1 equivalent, but counting signatures differ via 4-vertex induced subgraph counts).
-
----
+1. exact source commit;
+2. input catalog/data checksums;
+3. environment/package versions;
+4. raw per-instance signatures or sufficient collision logs;
+5. independently recomputed class/collision counts;
+6. raw benchmark timings;
+7. explicit finite scope in every theorem/result statement.
 
 ## Installation
 
 ```bash
-pip install numpy
-# Optional for GPU (graph n=8):
-pip install torch  # CUDA version recommended
+pip install numpy networkx
 ```
 
-No other dependencies required. Pure Python + NumPy for magma experiments.
+PyTorch/CUDA is optional for GPU experiments.
 
----
+## License status
 
-## Background
-
-**Boolean algebraic classification** has been the standard since universal algebra was formalized. Every theorem prover, CAS, and algebraic structure database uses boolean properties.
-
-**This work** shows that treating algebraic laws as counting functions (not binary predicates) produces a fundamentally richer classification scheme. The amplification is not marginal — it's 4-5 orders of magnitude for medium-sized structures.
-
-The same principle extends to graphs: counting induced subgraphs gives strictly more power than spectral methods alone, achieving complete classification well beyond what was previously known.
-
----
-
-*Part of an ongoing exploration of novel algebraic invariants for computational structure theory.*
+No repository-level `LICENSE` file is currently committed. Until provenance and licensing are explicitly resolved, do not infer reuse rights from earlier README wording.
