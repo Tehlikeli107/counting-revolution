@@ -1,0 +1,7 @@
+{
+  "filter": "first 64 bits of SHA-256 over canonical exact component serialization",
+  "logical_property": "equal exact components necessarily have equal filter digests; duplicate digests are exact-resolved",
+  "candidate_group_count": 0,
+  "candidate_member_count": 0,
+  "groups": []
+}

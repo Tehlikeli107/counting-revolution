@@ -1,0 +1,87 @@
+{
+  "artifact_version": "v68-public-preview",
+  "source_capture_version": "v67",
+  "repository": "salihcankurnaz/counting-revolution",
+  "target_branch": "master",
+  "expected_parent_sha": "eeb667e91f5ab6fcba3d2eb719a0e2d1dbf8d2d3",
+  "target_directory": "benchmarks/publication-evidence/2026-08-25-v67",
+  "content_encoding": "canonical LF for textual payloads",
+  "files": [
+    {
+      "path": "CATALOG_ATTRIBUTION.md",
+      "bytes": 573,
+      "sha256": "0a4816abd367e18365c6ba5f83c1ac0a3b4ead5d45d4054d2fdd8defe606ffd7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4006,
+      "sha256": "0e99bb521c4843cbdf824b9ecf6041f00de9308d3a00beb4b86baca18a520cf6"
+    },
+    {
+      "path": "methodology.json",
+      "bytes": 2244,
+      "sha256": "3f097705a97519613fb573bedc2d481b2d5e0947913917bf8884ae64ea650923"
+    },
+    {
+      "path": "source_hashes.json",
+      "bytes": 794,
+      "sha256": "24f30d40060697e28d81d1ae28c0ad58d4814cf966251fc926cdb8967421e47e"
+    },
+    {
+      "path": "v67/CLAIM_SAFE_RESULTS.json",
+      "bytes": 1653,
+      "sha256": "075d36c1764f23c2af5bd94596f871662fdc85333dd23c7617d4adb2d95edb4b"
+    },
+    {
+      "path": "v67/CLAIM_SAFE_RESULTS.md",
+      "bytes": 2143,
+      "sha256": "f2af0a0a393d843bc04a384fc2f59f4e6d9edcb5af68dcce29109c247a4fd4f9"
+    },
+    {
+      "path": "v67/capture_manifest_v67.json",
+      "bytes": 1490,
+      "sha256": "01db18901345de159237c10954542a23ff90533cd6cc7bfa125394e399fca128"
+    },
+    {
+      "path": "v67/catalog_provenance.json",
+      "bytes": 407,
+      "sha256": "97ce7125f462a0a533954e26bf005dbf8d2af1ecf87744c60f73538480b2ae9a"
+    },
+    {
+      "path": "v67/digest_candidate_groups.json",
+      "bytes": 288,
+      "sha256": "b076c5224b046a32f95bc8ccd800245c21d09c8a54d0d9a526a8ed83cf0cc575"
+    },
+    {
+      "path": "v67/environment.json",
+      "bytes": 294,
+      "sha256": "c21a29ae9808c435779dfbd984b870116a80b1263793f0d01420ee8dfc2bf1d3"
+    },
+    {
+      "path": "v67/exact_collision_groups.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "v67/independent_graph10_new_component_full_scan_v67.py",
+      "bytes": 30805,
+      "sha256": "828ab1374f9568f985f1ab6f672e5ce57ee30b14ba9397201238ba6c22fea6db"
+    },
+    {
+      "path": "v67/source_provenance.json",
+      "bytes": 598,
+      "sha256": "ab230a312482a54e3589a787b1914f3d745158d9510eb64c0d66ffd9c8a89bd9"
+    },
+    {
+      "path": "v67/validation.json",
+      "bytes": 568,
+      "sha256": "343e4a6909f9005053d54dbac0d36cc0ede9958cb992e6e516e5fff98be37e4d"
+    }
+  ],
+  "third_party_catalog": {
+    "embedded": false,
+    "name": "Brendan McKay graph10.g6.gz",
+    "license": "CC BY 4.0",
+    "attribution_file": "CATALOG_ATTRIBUTION.md"
+  }
+}

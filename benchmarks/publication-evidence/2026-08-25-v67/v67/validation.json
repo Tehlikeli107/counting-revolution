@@ -1,0 +1,10 @@
+{
+  "published_v64_result_path": "benchmarks/publication-evidence/2026-08-25-v64/v64/CLAIM_SAFE_RESULTS.json",
+  "published_v64_result_blob": "4810fce4844fe950a1b300fad20464b1e86af70a",
+  "new_component_definition_path": "benchmarks/publication-evidence/2026-08-25-v64/v64/new_component_definition.json",
+  "new_component_definition_blob": "09483630d2cdeba62b5513707f23e22b4137a996",
+  "optimized_vs_published_v64_hash_parity": 1868,
+  "optimized_vs_direct_reference_crosschecks": 256,
+  "parser_parity_checks": 2048,
+  "optimized_relabeling_invariance_checks": 2048
+}

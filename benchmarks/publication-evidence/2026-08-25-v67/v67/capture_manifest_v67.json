@@ -1,0 +1,51 @@
+{
+  "version": "v67",
+  "result": "OK",
+  "files": [
+    {
+      "path": "catalog_provenance.json",
+      "bytes": 416,
+      "sha256": "c26cd57527663340f0c250d73bb32b8fc776c248aea9ad72b551c9c45246aa2c"
+    },
+    {
+      "path": "CLAIM_SAFE_RESULTS.json",
+      "bytes": 1677,
+      "sha256": "3b29cf9f9de291f15c1f5192685c00365aa31ede711ed7c3c6a2c5f5ed8b787d"
+    },
+    {
+      "path": "CLAIM_SAFE_RESULTS.md",
+      "bytes": 2197,
+      "sha256": "8c1c326adf5b3e2afc4166e6a17a85ef64e237cfbff57b70e508e1b013d3aba0"
+    },
+    {
+      "path": "digest_candidate_groups.json",
+      "bytes": 294,
+      "sha256": "f91b626a5a5aa051d81226c8f3d5ad2930083dfb9b3468692c7940015e7289f7"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 302,
+      "sha256": "c326037a045cfc508fe3c274a268d818246cf38900195be910a7de575c6c83f9"
+    },
+    {
+      "path": "exact_collision_groups.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "independent_graph10_new_component_full_scan_v67.py",
+      "bytes": 30805,
+      "sha256": "828ab1374f9568f985f1ab6f672e5ce57ee30b14ba9397201238ba6c22fea6db"
+    },
+    {
+      "path": "source_provenance.json",
+      "bytes": 612,
+      "sha256": "b9643f2bed66fb321d7a1283c68b80dc0f843c95322e0f7c4a9b914ba5cb0204"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 577,
+      "sha256": "7523b57e6317c06f43e914d39d261895a8e0eddb29a60d9e5009e36cdd7e1e66"
+    }
+  ]
+}

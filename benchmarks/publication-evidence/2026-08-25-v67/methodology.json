@@ -1,0 +1,55 @@
+{
+  "artifact_version": "v68-public-preview",
+  "source_capture_version": "v67",
+  "repository": "salihcankurnaz/counting-revolution",
+  "repo_id": 1193202490,
+  "branch": "master",
+  "expected_parent_sha": "eeb667e91f5ab6fcba3d2eb719a0e2d1dbf8d2d3",
+  "upstream_v64_result": {
+    "path": "benchmarks/publication-evidence/2026-08-25-v64/v64/CLAIM_SAFE_RESULTS.json",
+    "git_blob_sha": "4810fce4844fe950a1b300fad20464b1e86af70a"
+  },
+  "new_component_definition": {
+    "path": "benchmarks/publication-evidence/2026-08-25-v64/v64/new_component_definition.json",
+    "git_blob_sha": "09483630d2cdeba62b5513707f23e22b4137a996"
+  },
+  "upstream_catalog_attribution": {
+    "path": "benchmarks/publication-evidence/2026-08-25-v64/CATALOG_ATTRIBUTION.md",
+    "git_blob_sha": "7c0159db4117850c04c62f1a0d716965abeebcc0"
+  },
+  "catalog": {
+    "url": "https://users.cecs.anu.edu.au/~bdm/data/graph10.g6.gz",
+    "graphs": 12005168,
+    "connected": 11716571,
+    "compressed_bytes": 31112164,
+    "compressed_sha256": "a16f47a95e3e174f4b08042fec95dce8b67712b0e465b5097ffd9334dde2faf8",
+    "decompressed_bytes": 120051680,
+    "decompressed_sha256": "923cabf28082cba3ee296251d23eee21b32056b36cf4952e42958d468357df36",
+    "raw_catalog_committed": false
+  },
+  "validation": {
+    "optimized_vs_published_v64_hash_parity": 1868,
+    "optimized_vs_direct_reference_crosschecks": 256,
+    "parser_parity_checks": 2048,
+    "optimized_relabeling_invariance_checks": 2048,
+    "duplicate_digest_candidate_groups": 0,
+    "duplicate_digest_candidate_members": 0,
+    "exact_collision_groups": 0,
+    "exact_collision_members": 0,
+    "distinct_component_values": 12005168
+  },
+  "candidate_space": {
+    "original_top_level_components": 13,
+    "new_top_level_components": 1,
+    "expanded_top_level_components": 14,
+    "minimum_nonempty_cardinality": 1,
+    "scope": "top-level component counting only"
+  },
+  "claim_scope": [
+    "finite complete McKay order-10 catalog only",
+    "minimum 1 only in the explicit expanded 14-component top-level space",
+    "no global information-minimality or subfeature-minimality claim",
+    "no reconstruction theorem or general graph-isomorphism claim",
+    "no n>10, asymptotic, novelty, or priority claim"
+  ]
+}

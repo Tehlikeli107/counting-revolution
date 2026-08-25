@@ -1,0 +1,15 @@
+{
+  "repository": "salihcankurnaz/counting-revolution",
+  "repo_id": 1193202490,
+  "branch": "master",
+  "expected_head": "eeb667e91f5ab6fcba3d2eb719a0e2d1dbf8d2d3",
+  "actual_remote_head": "eeb667e91f5ab6fcba3d2eb719a0e2d1dbf8d2d3",
+  "v64_result": {
+    "path": "benchmarks/publication-evidence/2026-08-25-v64/v64/CLAIM_SAFE_RESULTS.json",
+    "git_blob": "4810fce4844fe950a1b300fad20464b1e86af70a"
+  },
+  "new_component_definition": {
+    "path": "benchmarks/publication-evidence/2026-08-25-v64/v64/new_component_definition.json",
+    "git_blob": "09483630d2cdeba62b5513707f23e22b4137a996"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "url": "https://users.cecs.anu.edu.au/~bdm/data/graph10.g6.gz",
+  "compressed_bytes": 31112164,
+  "compressed_sha256": "a16f47a95e3e174f4b08042fec95dce8b67712b0e465b5097ffd9334dde2faf8",
+  "decompressed_bytes": 120051680,
+  "decompressed_sha256": "923cabf28082cba3ee296251d23eee21b32056b36cf4952e42958d468357df36",
+  "records": 12005168,
+  "connected_graphs": 11716571,
+  "raw_catalog_embedded": false
+}
