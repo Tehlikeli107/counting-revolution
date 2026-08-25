@@ -1,6 +1,6 @@
 # Counting Revolution: Counting-Based Algebraic and Graph Invariants
 
-> **Research status:** computational exploration of counting-valued invariants with provenance-bound exhaustive finite results for order-3 magmas and order-8/order-9/order-10 simple graphs. The repository now contains validated order-8 and order-9 top-level component-minimality results, an order-10 boundary result for the original 13-component graph signature, and an exhaustive order-10 result for a richer vertex-deletion component. It does **not** establish a general graph-isomorphism algorithm, a graph-reconstruction theorem, an asymptotic scaling law, or a novelty/priority claim.
+> **Research status:** computational exploration of counting-valued invariants with provenance-bound exhaustive finite results for order-3 magmas and order-8/order-9/order-10 simple graphs. The repository contains validated order-8/order-9 component-minimality results, order-10 boundary and deletion-deck results, and a frozen finite-order atomic information frontier for the aligned `{e1,...,e9,tree}` deleted-card family. It does **not** establish a general graph-isomorphism algorithm, the Graph Reconstruction Conjecture, an asymptotic scaling law, or a novelty/priority claim.
 
 The central idea is to record **how often** structural laws or patterns occur, rather than only whether they occur. This produces richer finite signatures for algebraic structures and graphs.
 
@@ -162,6 +162,82 @@ The explicit expanded top-level candidate space contains the original 13 compone
 
 **Important scope:** the deletion-deck component is internally rich: it packages ten vertex-deleted graph summaries. A top-level cardinality of 1 does **not** mean globally minimal information content, a one-scalar invariant, a proof of the Graph Reconstruction Conjecture, or a general graph-isomorphism solution.
 
+### Order-10 atomic information frontier
+
+Publication release candidate: [`benchmarks/publication-evidence/2026-08-26-v104/`](benchmarks/publication-evidence/2026-08-26-v104/)
+
+The collision-free order-10 deletion-deck component is internally rich, so the
+next question is not merely whether it distinguishes the catalog, but how much
+of its internal information is actually necessary.
+
+For each deleted card `G-v`, the V104 release fixes the aligned atomic family
+
+```text
+e1, e2, e3, e4, e5, e6, e7, e8, e9, tree
+```
+
+where `e1..e9` are exact adjacency characteristic-polynomial elementary
+symmetric coefficients and `tree` is the exact spanning-tree count. For a
+chosen field subset, values belonging to the same deleted card remain paired
+before the ten card records are sorted as a multiset.
+
+On the complete catalog of **12,005,168** non-isomorphic simple graphs on
+10 vertices, let `m(b)` be the minimum number of these atomic fields required
+for global injectivity when an arbitrary deterministic auxiliary channel of at
+most `b` fixed-width bits is allowed.
+
+The exact finite-order frontier for `b = 0,...,6` is:
+
+| Auxiliary bits `b` | Exact minimum atomic fields `m(b)` | One matching upper-bound base |
+|---:|---:|---|
+| 0 | **5** | one of five inclusion-minimal complete 5-field subsets |
+| 1 | **3** | `e2 + e4 + e6` plus the explicit V94 one-bit channel |
+| 2 | **3** | `e2 + e4 + tree` (maximum base class 4) |
+| 3 | **2** | `e2 + e6` (maximum base class 7) |
+| 4 | **2** | `e2 + e4` (maximum base class 10) |
+| 5 | **2** | `e2 + e4` (maximum base class 10) |
+| 6 | **1** | `e4` (maximum base class 57) |
+
+Therefore:
+
+```text
+m(0..6) = [5, 3, 3, 2, 2, 2, 1]
+```
+
+The matching lower bounds include an explicit obstruction atlas:
+
+- all **45** atomic pairs have five pairwise non-isomorphic order-10 graphs
+  with the same aligned pair signature, ruling out arbitrary 1-bit and 2-bit
+  repair of every pair;
+- all **10** single atomic fields have 33 pairwise non-isomorphic graphs with
+  the same single-field signature, directly ruling out arbitrary 3-bit,
+  4-bit and 5-bit repair of every single field;
+- stronger single-field analysis shows the unique best single atomic field is
+  `e4`, whose exact auxiliary optimum is **57 states / 6 fixed-width bits**.
+
+V104 also separates **certificate verification** from **raw full-catalog
+replication** and includes a theorem dependency map, explicit obstruction
+tables, a preliminary literature/novelty audit and conservative claim wording.
+
+**Scope:** this is an exact result only for the complete finite `n=10` catalog
+and the stated aligned atomic family. It does not prove a general
+graph-isomorphism algorithm, the Reconstruction Conjecture, the same frontier
+for larger orders, or novelty/priority relative to all literature.
+
+### Literature positioning of the new frontier
+
+The V103/V104 literature audit records important prior art. In particular,
+full vertex-deck reconstruction is already known computationally well beyond
+order 10, polynomial/spectral reconstruction is a classical research area, and
+prior work has already reported complete multivariate invariant discrimination
+on exhaustive connected order-9/order-10 graph populations.
+
+Accordingly, the defensible contribution here is the **specific finite-order
+information frontier for the fixed aligned deleted-card atomic family, with
+matching lower/upper certificates and an explicit obstruction atlas**. The
+release does not make a "first", "world-first", general graph-isomorphism or
+general reconstruction claim.
+
 ### Finite order-8 / order-9 / order-10 observation
 
 Within the **original 13-component family**:
@@ -198,6 +274,16 @@ Vertex-deletion data are related to graph reconstruction and graph isomorphism. 
 - order-10: the augmented five-component signature is collision-free on **12,005,168 / 12,005,168** graphs;
 - order-10: the new deletion-deck component alone is collision-free on **12,005,168 / 12,005,168** graphs;
 - order-10: minimum nonempty top-level cardinality is **1 within the explicit expanded 14-component space**;
+- order-10 atomic deletion-deck family: exact auxiliary-bit/field-count frontier
+  **`[5, 3, 3, 2, 2, 2, 1]` for bit budgets `0..6`** on the complete
+  12,005,168-graph catalog;
+- order-10: **3 bits** is the first tested/frozen budget that permits a
+  two-field atomic base (`e2+e6`, exact maximum class 7);
+- order-10: **6 bits** is the first auxiliary-bit budget that permits a one-field atomic base
+  (`e4`, exact maximum class 57);
+- order-10: explicit obstruction certificates cover all **45 atomic pairs**
+  (five non-isomorphic common-signature graphs each) and all **10 single
+  atomic fields** (33 non-isomorphic common-signature graphs each);
 - all of these statements are finite results for the exact populations and candidate spaces stated above.
 
 ## What is not established here
@@ -215,13 +301,23 @@ Vertex-deletion data are related to graph reconstruction and graph isomorphism. 
 
 ## Reproducibility priorities
 
-The order-3, order-8, order-9 and order-10 finite results are backed by committed evidence and independent verifiers. Remaining priorities are:
+The order-3, order-8, order-9 and order-10 finite results are backed by
+committed or frozen evidence and independent verifiers. After the V104
+information-frontier release candidate, the main priorities are:
 
-1. clean stale claim/provenance language in `graph_n8_exhaustive.py` while preserving immutable evidence snapshots;
-2. decompose the rich deletion-deck component into finer subfeatures and determine how much of its information is actually needed at order 10;
-3. characterize structural commonalities of the 264 original full-13 order-10 collision pairs;
-4. test the deletion-deck component on larger orders only with explicitly feasible and provenance-bound populations;
-5. capture raw GPU benchmark timings with exact hardware/software, warmup, repetition and correctness protocols before making performance claims.
+1. publish the clean V104 finite-`n=10` frontier evidence without rewriting
+   earlier immutable evidence snapshots;
+2. complete a broader systematic literature review before any novelty or
+   priority wording stronger than "direct prior match not identified in the
+   searched literature";
+3. convert the frozen proof dependency map into manuscript-ready mathematical
+   notation and proofs of the fast deleted-card coefficient identities;
+4. search for a more natural mask-free realization of the explicit V94
+   one-bit auxiliary channel;
+5. keep certificate-only verification and raw 12M-graph replication as
+   explicitly separate reproducibility modes;
+6. perform larger-order experiments only after a specific theorem question and
+   feasible provenance-bound population are defined.
 
 ## Installation
 
