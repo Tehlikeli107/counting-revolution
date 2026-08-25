@@ -1,7 +1,7 @@
 {
-  "version": "v105-preview",
-  "result": "PREVIEW_ONLY",
-  "source_release": "V104 publication release candidate",
+  "version": "v104-publication",
+  "result": "OK",
+  "source_release": "V104 publication release candidate (verified and published)",
   "source_release_zip": {
     "bytes": 68708,
     "sha256": "37c5d58c6037fd79ebf88a2b3c5ff38392c17a465cb13d179af48cf0888549b7"
@@ -134,5 +134,11 @@
       "sha256": "534075d35bb6cc9231ac363a970a511301debf6ae50a8dfa0fa48f380965e732"
     }
   ],
-  "scope": "Additive publication evidence only. Existing V47/V51/V54/V59/V64/V67 snapshots remain untouched."
+  "scope": "Additive publication evidence only. Existing V47/V51/V54/V59/V64/V67 snapshots remain untouched.",
+  "publication": {
+    "repository": "salihcankurnaz/counting-revolution",
+    "evidence_path": "benchmarks/publication-evidence/2026-08-26-v104",
+    "initial_publication_commit": "7f98f83739be57d1efd7f9b1d9327e4650e98ee8",
+    "status": "PUBLISHED"
+  }
 }

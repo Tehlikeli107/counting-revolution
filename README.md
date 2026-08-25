@@ -277,7 +277,7 @@ Vertex-deletion data are related to graph reconstruction and graph isomorphism. 
 - order-10 atomic deletion-deck family: exact auxiliary-bit/field-count frontier
   **`[5, 3, 3, 2, 2, 2, 1]` for bit budgets `0..6`** on the complete
   12,005,168-graph catalog;
-- order-10: **3 bits** is the first tested/frozen budget that permits a
+- order-10: **3 bits** is the first auxiliary-bit budget that permits a
   two-field atomic base (`e2+e6`, exact maximum class 7);
 - order-10: **6 bits** is the first auxiliary-bit budget that permits a one-field atomic base
   (`e4`, exact maximum class 57);
