@@ -1,0 +1,7 @@
+{
+  "sample_size": 2048,
+  "sample_indices_sha256": "2920bb5b49da82d3f0f7481b51bc599f3a909739aa27a29c9aae0db684bc1faf",
+  "graph6_parser_vs_networkx": 2048,
+  "representative4_vs_repository_source": 2048,
+  "result": "OK"
+}

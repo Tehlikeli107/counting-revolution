@@ -1,0 +1,35 @@
+{
+  "version": "v64",
+  "experiment": "sparse exact refinement of the exhaustive V63 order-10 representative-4 collision set",
+  "upstream_v63_zip_sha256": "f1304f278f1089678970e8c7393af1a55d2a8759c985bf530eb52238520ac393",
+  "catalog_graphs": 12005168,
+  "v63_representative4_components": [
+    "characteristic_coefficients",
+    "spanning_tree_count",
+    "local_clustering_multiset",
+    "neighbor_degree_profile"
+  ],
+  "v63_representative4_collision_groups": 933,
+  "v63_representative4_collision_members": 1868,
+  "full13_source_parity_checks": 1868,
+  "full13_residual_collision_groups": 264,
+  "full13_residual_collision_members": 528,
+  "full13_collision_free_on_complete_order10_catalog": false,
+  "new_component": "vertex_deleted_charpoly_spanning_tree_joint_multiset",
+  "new_component_relabeling_invariance_checks": 3736,
+  "new_component_splits_v63_rep4_collision_groups": 933,
+  "new_component_unresolved_v63_rep4_groups": 0,
+  "augmented5_components": [
+    "characteristic_coefficients",
+    "spanning_tree_count",
+    "local_clustering_multiset",
+    "neighbor_degree_profile",
+    "vertex_deleted_charpoly_spanning_tree_joint_multiset"
+  ],
+  "augmented5_distinct_signatures": 12005168,
+  "augmented5_collision_free_on_complete_mckay_order10_catalog": true,
+  "augmented14_collision_free_on_complete_mckay_order10_catalog": true,
+  "logical_certificate": "Every augmented-5 collision would necessarily be a collision under its first four components. V63 exhaustively enumerated every non-singleton representative-4 equivalence group on all 12,005,168 catalog graphs. V64 recomputes every member of those 933 groups, and the new component is distinct for every member within every group. Therefore no augmented-5 collision remains anywhere in the catalog.",
+  "claim_scope": "Finite exhaustive order-10 collision-freedom only for the stated augmented five-component signature, chained to the exact V63 exhaustive representative-4 scan. No minimum-cardinality claim in the expanded candidate space, no n>10, asymptotic, novelty, priority, or general graph-isomorphism claim.",
+  "elapsed_seconds": 13.489171266555786
+}

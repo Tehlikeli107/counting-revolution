@@ -1,0 +1,52 @@
+{
+  "artifact_version": "v65-public-preview",
+  "source_stages": [
+    "v63",
+    "v64"
+  ],
+  "repository": "salihcankurnaz/counting-revolution",
+  "repo_id": 1193202490,
+  "branch": "master",
+  "expected_parent_sha": "00be64746b26a0fb695203814b8e29e130913478",
+  "source_file": {
+    "path": "graph_n8_exhaustive.py",
+    "git_blob_sha": "8ddf73479a7653bed7b7a93beada9f364d57c9dd"
+  },
+  "catalog": {
+    "url": "https://users.cecs.anu.edu.au/~bdm/data/graph10.g6.gz",
+    "graphs": 12005168,
+    "connected": 11716571,
+    "compressed_bytes": 31112164,
+    "compressed_sha256": "a16f47a95e3e174f4b08042fec95dce8b67712b0e465b5097ffd9334dde2faf8",
+    "decompressed_bytes": 120051680,
+    "decompressed_sha256": "923cabf28082cba3ee296251d23eee21b32056b36cf4952e42958d468357df36",
+    "raw_catalog_committed": false
+  },
+  "v63": {
+    "representative4_distinct": 12004233,
+    "collision_groups": 933,
+    "collision_members": 1868,
+    "group_size_histogram": {
+      "2": 931,
+      "3": 2
+    },
+    "source_parity_checks": 2048
+  },
+  "v64": {
+    "full13_source_parity_checks": 1868,
+    "full13_residual_collision_groups": 264,
+    "full13_residual_collision_members": 528,
+    "new_component": "vertex_deleted_charpoly_spanning_tree_joint_multiset",
+    "new_component_relabeling_checks": 3736,
+    "rep4_collision_groups_split": 933,
+    "rep4_collision_groups_unresolved": 0,
+    "augmented5_distinct": 12005168
+  },
+  "logical_certificate": "Any augmented-5 collision must be a V63 representative-4 collision. V63 exhaustively enumerates all such non-singleton groups; V64 evaluates the new component on every member of all 933 groups and separates every group.",
+  "claim_scope": [
+    "finite complete McKay order-10 catalog only",
+    "no minimum-cardinality claim in expanded invariant space",
+    "no n>10 completeness claim",
+    "no asymptotic, novelty, priority, or general-GI claim"
+  ]
+}

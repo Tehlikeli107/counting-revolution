@@ -1,0 +1,25 @@
+{
+  "version": "v63",
+  "experiment": "exhaustive n=10 scan of the V59 representative minimum four-component signature",
+  "catalog_graphs": 12005168,
+  "connected_graphs": 11716571,
+  "representative_components": [
+    "characteristic_coefficients",
+    "spanning_tree_count",
+    "local_clustering_multiset",
+    "neighbor_degree_profile"
+  ],
+  "source_parity_sample_checks": 2048,
+  "compressed_catalog_sha256": "a16f47a95e3e174f4b08042fec95dce8b67712b0e465b5097ffd9334dde2faf8",
+  "decompressed_catalog_sha256": "923cabf28082cba3ee296251d23eee21b32056b36cf4952e42958d468357df36",
+  "digest_candidate_groups": 933,
+  "digest_candidate_members": 1868,
+  "exact_collision_groups": 933,
+  "exact_collision_members": 1868,
+  "exact_distinct_representative_signatures": 12004233,
+  "representative_collision_free_on_complete_mckay_order10_catalog": false,
+  "scan_elapsed_seconds": 1829.2027831999585,
+  "sort_and_candidate_detection_seconds": 4.244566600071266,
+  "total_elapsed_seconds": 1854.6779828071594,
+  "claim_scope": "Finite exhaustive result only for the stated four-component signature on Brendan McKay's complete 12,005,168-graph order-10 catalog. This does not establish global minimum cardinality at n=10, behavior for n>10, asymptotic growth, novelty, or a general graph-isomorphism algorithm."
+}

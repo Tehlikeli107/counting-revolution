@@ -1,0 +1,7 @@
+{
+  "name": "vertex_deleted_charpoly_spanning_tree_joint_multiset",
+  "definition": "For each vertex v, delete v. On G-v compute the exact adjacency characteristic-polynomial coefficient tuple using integer traces/Newton identities and the exact spanning-tree count using an integer Bareiss Matrix-Tree determinant. Return the sorted multiset of the 10 (charpoly_coefficients, spanning_tree_count) pairs.",
+  "isomorphism_invariance_argument": "Any graph isomorphism induces a bijection on vertices and maps G-v isomorphically to H-f(v). Characteristic-polynomial coefficients and spanning-tree count are isomorphism invariants of each deleted subgraph, so the sorted vertex-deletion multiset is invariant.",
+  "relabeling_checks": 3736,
+  "graphs_checked": 1868
+}

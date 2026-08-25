@@ -1,0 +1,28 @@
+{
+  "repository": "salihcankurnaz/counting-revolution",
+  "repo_id": 1193202490,
+  "branch": "master",
+  "expected_head": "00be64746b26a0fb695203814b8e29e130913478",
+  "actual_remote_head": "00be64746b26a0fb695203814b8e29e130913478",
+  "source": {
+    "path": "graph_n8_exhaustive.py",
+    "git_blob": "8ddf73479a7653bed7b7a93beada9f364d57c9dd",
+    "sha256": "dbc8425cbeb513b2d2f188685b823447b7061ac67a04cc81a6d93f944947ba87"
+  },
+  "v63_input": {
+    "filename": "V63_COUNTING_REVOLUTION_GRAPH10_REP4_FULL_SCAN_20260825_032301.zip",
+    "sha256": "f1304f278f1089678970e8c7393af1a55d2a8759c985bf530eb52238520ac393",
+    "manifest_files_verified": 9
+  },
+  "catalog_from_v63": {
+    "url": "https://users.cecs.anu.edu.au/~bdm/data/graph10.g6.gz",
+    "compressed_bytes": 31112164,
+    "compressed_sha256": "a16f47a95e3e174f4b08042fec95dce8b67712b0e465b5097ffd9334dde2faf8",
+    "decompressed_bytes": 120051680,
+    "decompressed_sha256": "923cabf28082cba3ee296251d23eee21b32056b36cf4952e42958d468357df36",
+    "data_records": 12005168,
+    "connected_graphs_verified": 11716571,
+    "official_connected_expected": 11716571,
+    "raw_uncompressed_catalog_in_result_zip": false
+  }
+}

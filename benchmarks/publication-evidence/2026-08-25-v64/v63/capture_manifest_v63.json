@@ -1,0 +1,51 @@
+{
+  "version": "v63",
+  "result": "OK",
+  "files": [
+    {
+      "path": "catalog_provenance.json",
+      "bytes": 492,
+      "sha256": "3bfad477f7fe851e6bf44d4308a222f95499f6236c4064232ac9d953bded2f57"
+    },
+    {
+      "path": "CLAIM_SAFE_RESULTS.json",
+      "bytes": 1335,
+      "sha256": "fed31b86c0192acc10c44ce535fc20d4ab0d2a909bdc18da3c783b53cebf9269"
+    },
+    {
+      "path": "CLAIM_SAFE_RESULTS.md",
+      "bytes": 1623,
+      "sha256": "0e4282630f65bedccf435b5173521117d7b50bd7227afd1c0265183b035947c3"
+    },
+    {
+      "path": "digest_candidate_groups.json",
+      "bytes": 124385,
+      "sha256": "47dc439bd87ec6e9708f4d967cf1557a56e4350f05af29fa43106677d58e8240"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 302,
+      "sha256": "c326037a045cfc508fe3c274a268d818246cf38900195be910a7de575c6c83f9"
+    },
+    {
+      "path": "exact_collision_groups.json",
+      "bytes": 1834915,
+      "sha256": "7de375779701de180a049dfe7c68968fadc393c732077299a34422019cccbf8a"
+    },
+    {
+      "path": "independent_graph10_rep4_full_scan_v63.py",
+      "bytes": 30270,
+      "sha256": "8d37f04c6e5a9899f3e7ac9e2d170ec3355599eb5b15d176fb6966bd70a880f7"
+    },
+    {
+      "path": "source_parity.json",
+      "bytes": 229,
+      "sha256": "13bd390506aee133e7e7154533fabed7525599ffbde5607df0116bc44540145c"
+    },
+    {
+      "path": "source_provenance.json",
+      "bytes": 709,
+      "sha256": "a0bbae1082405d3ccdcf8a362932688a14ac56713b6cd039cc717d62ec3e6458"
+    }
+  ]
+}

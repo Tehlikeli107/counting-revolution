@@ -1,0 +1,46 @@
+{
+  "version": "v64",
+  "result": "OK",
+  "files": [
+    {
+      "path": "CLAIM_SAFE_RESULTS.json",
+      "bytes": 2169,
+      "sha256": "d9157dce1183ed4617694136501b938d91a3067639f833caf3048c8bc2070382"
+    },
+    {
+      "path": "CLAIM_SAFE_RESULTS.md",
+      "bytes": 2541,
+      "sha256": "749b3c01f173be4abc14152ad0f03b4466d309087570e164eaf07280f6749da0"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 302,
+      "sha256": "c326037a045cfc508fe3c274a268d818246cf38900195be910a7de575c6c83f9"
+    },
+    {
+      "path": "full13_residual_collision_groups.json",
+      "bytes": 88418,
+      "sha256": "8d7ef7da1f3fe0ba82f59c6f0da34302d31f6a7ff3de5404f08cec2f5e381ff5"
+    },
+    {
+      "path": "independent_graph10_augmented_refinement_v64.py",
+      "bytes": 28508,
+      "sha256": "49b95381248a10ecdcbc794ff97f324fc603b38c1f84427cdd9386bfa91f680d"
+    },
+    {
+      "path": "new_component_definition.json",
+      "bytes": 770,
+      "sha256": "7552beaec5352fb46a12ebf87e4a1a8b9f2c239130090e71f5a6457a6fcd5fac"
+    },
+    {
+      "path": "new_component_values_on_v63_colliders.csv",
+      "bytes": 156039,
+      "sha256": "da45fe136f88dd90921e0d03e9b19aaca025b2f7e0fb1ae8ccc9947d71b3fc21"
+    },
+    {
+      "path": "source_provenance.json",
+      "bytes": 1208,
+      "sha256": "54222956857d6fd4128a161b012107f4d4d077adf92e03aa539fed471cbbc995"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "artifact_version": "v65-public-preview",
+  "repository": "salihcankurnaz/counting-revolution",
+  "target_branch": "master",
+  "expected_parent_sha": "00be64746b26a0fb695203814b8e29e130913478",
+  "target_directory": "benchmarks/publication-evidence/2026-08-25-v64",
+  "content_encoding": "canonical LF for textual payloads",
+  "files": [
+    {
+      "path": "CATALOG_ATTRIBUTION.md",
+      "bytes": 573,
+      "sha256": "0a4816abd367e18365c6ba5f83c1ac0a3b4ead5d45d4054d2fdd8defe606ffd7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4399,
+      "sha256": "f0a52317f576923d6e4d3f98f43d56384f9ce24bb386e29fa535468a51fdc8de"
+    },
+    {
+      "path": "methodology.json",
+      "bytes": 1908,
+      "sha256": "60b249fa532e4eb9efd921eae337e58c5c3a8e6c96463eedd715b848f23448d1"
+    },
+    {
+      "path": "source_hashes.json",
+      "bytes": 448,
+      "sha256": "6c86d1506d4cf418475819bb20a6283e8be7bf90a2a3c29e4c4b11812c973167"
+    },
+    {
+      "path": "v63/CLAIM_SAFE_RESULTS.json",
+      "bytes": 1311,
+      "sha256": "3ca46c2b93f8377c01c5a785c9cc3740fe51e560ff847d3025c05ad05fc8a8b5"
+    },
+    {
+      "path": "v63/CLAIM_SAFE_RESULTS.md",
+      "bytes": 1581,
+      "sha256": "e6fdd4f1be8a6528ddf3f807660d070e3f6c9e309f11f3324723f51a7f366656"
+    },
+    {
+      "path": "v63/capture_manifest_v63.json",
+      "bytes": 1493,
+      "sha256": "158483a1060c3080151712a5566c94be73937eaceefc09d880016e6c159a8b55"
+    },
+    {
+      "path": "v63/catalog_provenance.json",
+      "bytes": 482,
+      "sha256": "03b4173497aab559e837f1a7c355d7dca465ec983e352bbbbed71419f19570a1"
+    },
+    {
+      "path": "v63/digest_candidate_groups.json",
+      "bytes": 117846,
+      "sha256": "ae7be9ff7525e38f6683b1b8e8ce2554226c9baba54eccee49a4e925b16be80e"
+    },
+    {
+      "path": "v63/environment.json",
+      "bytes": 294,
+      "sha256": "c21a29ae9808c435779dfbd984b870116a80b1263793f0d01420ee8dfc2bf1d3"
+    },
+    {
+      "path": "v63/exact_collision_groups.json",
+      "bytes": 1701606,
+      "sha256": "39c9f54a0c4656b55bf19e2667b9de5c3da92e1be45f8f8c090959e56fedd7a9"
+    },
+    {
+      "path": "v63/independent_graph10_rep4_full_scan_v63.py",
+      "bytes": 30270,
+      "sha256": "8d37f04c6e5a9899f3e7ac9e2d170ec3355599eb5b15d176fb6966bd70a880f7"
+    },
+    {
+      "path": "v63/source_parity.json",
+      "bytes": 223,
+      "sha256": "6881306fca5859ee2bc173f2cd1cb4d66c15de692bd4611d08bc46ea6ddfec0b"
+    },
+    {
+      "path": "v63/source_provenance.json",
+      "bytes": 693,
+      "sha256": "429bbe15bfff1e67162f5d99f31c3fb82bfb52c33b338382da2ba9916953a0ff"
+    },
+    {
+      "path": "v64/CLAIM_SAFE_RESULTS.json",
+      "bytes": 2135,
+      "sha256": "db14cfaf7ffd8c26e7b1de6d2dc6761ffaff076707a8d49bbe691ec507e87a4f"
+    },
+    {
+      "path": "v64/CLAIM_SAFE_RESULTS.md",
+      "bytes": 2467,
+      "sha256": "3e5e9b7076b957dc8386f2647c3b50b153420d6c7e1c124a93c30965f5961ae4"
+    },
+    {
+      "path": "v64/capture_manifest_v64.json",
+      "bytes": 1375,
+      "sha256": "fbaf0de74fc8390544b66fe2d3ec5963646cacf76ea0e5d4ff8fcb04192d88ec"
+    },
+    {
+      "path": "v64/environment.json",
+      "bytes": 294,
+      "sha256": "c21a29ae9808c435779dfbd984b870116a80b1263793f0d01420ee8dfc2bf1d3"
+    },
+    {
+      "path": "v64/full13_residual_collision_groups.json",
+      "bytes": 84721,
+      "sha256": "004958ef09d5095974a7b651d2a87924a09c605e8faf26cdd158877df9f20c44"
+    },
+    {
+      "path": "v64/independent_graph10_augmented_refinement_v64.py",
+      "bytes": 28508,
+      "sha256": "49b95381248a10ecdcbc794ff97f324fc603b38c1f84427cdd9386bfa91f680d"
+    },
+    {
+      "path": "v64/new_component_definition.json",
+      "bytes": 764,
+      "sha256": "bf61571bf4cb9bcc73a5f2591d8e8f6785f0cd79cd46a801793f2effadb62bce"
+    },
+    {
+      "path": "v64/new_component_values_on_v63_colliders.csv",
+      "bytes": 156039,
+      "sha256": "da45fe136f88dd90921e0d03e9b19aaca025b2f7e0fb1ae8ccc9947d71b3fc21"
+    },
+    {
+      "path": "v64/source_provenance.json",
+      "bytes": 1181,
+      "sha256": "7520e0e9bde567d2d7d4889796f478ed8479e9e4c8cca12c5b331d793296dc44"
+    }
+  ],
+  "third_party_catalog": {
+    "embedded": false,
+    "name": "Brendan McKay graph10.g6.gz",
+    "license": "CC BY 4.0",
+    "attribution_file": "CATALOG_ATTRIBUTION.md"
+  }
+}
