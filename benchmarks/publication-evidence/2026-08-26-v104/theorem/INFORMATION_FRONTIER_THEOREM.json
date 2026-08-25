@@ -1,0 +1,136 @@
+{
+  "version": "v101",
+  "catalog_graphs": 12005168,
+  "atomic_family": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6",
+    "e7",
+    "e8",
+    "e9",
+    "tree"
+  ],
+  "frontier_definition": "For each fixed auxiliary bit budget b in {0,...,6}, minimize the number of atomic deleted-card fields among {e1,...,e9,tree} required for global injectivity on the complete n=10 non-isomorphic simple-graph catalog. Auxiliary channels in lower-bound impossibility statements may be arbitrary deterministic b-bit channels; upper bounds use either explicit channels or finite-catalog class-rank channels as stated.",
+  "exact_frontier_0_to_6_bits": [
+    {
+      "aux_bits": 0,
+      "capacity_states": 1,
+      "minimum_atomic_fields": 5,
+      "lower_bound": "V75: all atomic subsets of size <=4 are globally incomplete.",
+      "upper_bound": "V75: five inclusion-minimal complete 5-field subsets exist.",
+      "achieving_base": "e2+e3+e4+e6+tree (one of five witnesses)",
+      "certificate": "V75"
+    },
+    {
+      "aux_bits": 1,
+      "capacity_states": 2,
+      "minimum_atomic_fields": 3,
+      "lower_bound": "V96: all 45 atomic pairs have explicit collision class size >=3, so arbitrary 1 bit cannot repair any pair.",
+      "upper_bound": "V94: e2+e4+e6 plus one explicit mod-127-derived bit is globally injective.",
+      "achieving_base": "e2+e4+e6",
+      "certificate": "V96 lower + V94 upper"
+    },
+    {
+      "aux_bits": 2,
+      "capacity_states": 4,
+      "minimum_atomic_fields": 3,
+      "lower_bound": "V98: all 45 atomic pairs have certified collision class size >=5, so arbitrary 2 bits cannot repair any pair.",
+      "upper_bound": "V92/V98: e2+e4+tree has exact maximum class 4.",
+      "achieving_base": "e2+e4+tree",
+      "certificate": "V98 lower + V92 upper"
+    },
+    {
+      "aux_bits": 3,
+      "capacity_states": 8,
+      "minimum_atomic_fields": 2,
+      "lower_bound": "V90/V90.1: unique-best single field e4 still needs 57 states, so 8 states cannot repair any single field.",
+      "upper_bound": "V100: e2+e6 has exact maximum class 7.",
+      "achieving_base": "e2+e6",
+      "certificate": "V90.1 lower + V100 upper"
+    },
+    {
+      "aux_bits": 4,
+      "capacity_states": 16,
+      "minimum_atomic_fields": 2,
+      "lower_bound": "V90/V90.1: every single field needs at least 57 states; 16 states are insufficient.",
+      "upper_bound": "V91: e2+e4 has exact maximum class 10.",
+      "achieving_base": "e2+e4",
+      "certificate": "V90.1 lower + V91 upper"
+    },
+    {
+      "aux_bits": 5,
+      "capacity_states": 32,
+      "minimum_atomic_fields": 2,
+      "lower_bound": "V90/V90.1: every single field needs at least 57 states; 32 states are insufficient.",
+      "upper_bound": "V91: e2+e4 has exact maximum class 10.",
+      "achieving_base": "e2+e4",
+      "certificate": "V90.1 lower + V91 upper"
+    },
+    {
+      "aux_bits": 6,
+      "capacity_states": 64,
+      "minimum_atomic_fields": 1,
+      "lower_bound": "With zero atomic fields, a 6-bit channel has only 64 outputs for 12,005,168 graphs, so injectivity is impossible.",
+      "upper_bound": "V90/V90.1: e4 exact maximum class is 57 <=64.",
+      "achieving_base": "e4",
+      "certificate": "counting lower + V90.1 upper"
+    }
+  ],
+  "frontier_vector": [
+    5,
+    3,
+    3,
+    2,
+    2,
+    2,
+    1
+  ],
+  "thresholds": {
+    "first_budget_allowing_three_fields": 1,
+    "first_budget_allowing_two_fields": 3,
+    "first_budget_allowing_one_field": 6
+  },
+  "constructive_highlights": {
+    "one_bit_explicit": "e2+e4+e6 plus V94 h(G), with r=(sum_v e7(G-v)^2 - 8*sum_v tree(G-v)) mod 127 and fixed residue-coloring mask.",
+    "three_bit_pair": "e2+e6 exact maximum class 7 (V100).",
+    "four_bit_pair": "e2+e4 exact maximum class 10 (V91).",
+    "six_bit_single": "e4 exact maximum class 57 (V90/V90.1).",
+    "zero_bit_complete": "five inclusion-minimal complete 5-field subsets (V75)."
+  },
+  "proof_dependency_map": {
+    "V75": "pure atomic minimum field count = 5",
+    "V90": "single-field exact/lower-bound closure; e4 max 57",
+    "V90.1": "correct generic class-rank proof using full V83 globally-injective key F; numerical single-field results unchanged",
+    "V91": "e2+e4 exact pair max 10",
+    "V92": "triple max 2 for e2+e4+e5/e6; e2+e4+tree exact max 4",
+    "V94": "explicit one-bit e2+e4+e6 construction",
+    "V96": "all pairs + arbitrary 1 bit impossible; min fields at 1 bit =3",
+    "V98": "all pairs + arbitrary 2 bits impossible; min fields at 2 bits =3",
+    "V100": "e2+e6 exact max 7; min fields at 3 bits =2"
+  },
+  "claim_safe_statements": [
+    "On the complete finite n=10 catalog and within the explicit atomic deleted-card family {e1,...,e9,tree}, the exact minimum atomic-field counts for auxiliary budgets b=0,...,6 are [5,3,3,2,2,2,1].",
+    "The first auxiliary-bit budget that permits a two-field atomic base is exactly 3 bits; e2+e6 achieves this with maximum collision class 7.",
+    "The first auxiliary-bit budget that permits a single atomic field is exactly 6 bits; e4 achieves this with maximum collision class 57.",
+    "With one auxiliary bit, three atomic fields are necessary and sufficient; V94 gives an explicit finite-n=10 realization on e2+e4+e6."
+  ],
+  "do_not_claim": [
+    "No statement here proves a general graph-isomorphism algorithm or complexity bound.",
+    "No statement here resolves the Reconstruction Conjecture.",
+    "No statement here is proved for n>10.",
+    "The frontier is relative to the explicit atomic family {e1,...,e9,tree}.",
+    "Novelty/priority relative to the literature is not established by these certificates alone."
+  ],
+  "next_research_phase": [
+    "Freeze the 0..6 frontier and stop serial full-catalog scans unless a specific theorem gap is identified.",
+    "Consolidate all obstruction witnesses into a compact atlas keyed by field count and bit budget.",
+    "Search for a more natural mask-free realization of the V94 one-bit channel.",
+    "Prepare a standalone reproducibility bundle and proof-dependency document.",
+    "Run a literature/novelty review before publication claims.",
+    "Only then prepare controlled GitHub/publication updates."
+  ],
+  "elapsed_seconds": 0.024013757705688477
+}

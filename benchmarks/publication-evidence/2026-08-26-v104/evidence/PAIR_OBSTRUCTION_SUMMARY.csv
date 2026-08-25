@@ -1,0 +1,46 @@
+pair,explicit_witness_size,shared_signature_sha256,source,arbitrary_1_bit_impossible,arbitrary_2_bit_impossible
+e1+e2,5,f461d391042b3fde519482f95d3422a68a8c6b9c86773430bbb62a291f18c377,V90 3023-graph adversarial pool; observed class size 7,True,True
+e1+e3,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 351,True,True
+e1+e4,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 57,True,True
+e1+e5,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 924,True,True
+e1+e6,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 3023,True,True
+e1+e7,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 3023,True,True
+e1+e8,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 3023,True,True
+e1+e9,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 3023,True,True
+e1+tree,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 716,True,True
+e2+e3,5,7356120cc63608d1f9a35846c7ed440dcb4e0f6dde195c3e052d8ce4ce8b1478,V97 exact size-393 class,True,True
+e2+e4,5,3daf155462efccc1eb286fa26bd32ba29608584884d6764b2463956bd8566ee7,V91 exact size-10 class,True,True
+e2+e5,5,6f2ed64ff6db264a33cea613d819999c5e47f3902168e186a9554cf7dfb3d2b3,V90 3023-graph adversarial pool; observed class size 5,True,True
+e2+e6,5,6f2ed64ff6db264a33cea613d819999c5e47f3902168e186a9554cf7dfb3d2b3,V90 3023-graph adversarial pool; observed class size 7,True,True
+e2+e7,5,6f2ed64ff6db264a33cea613d819999c5e47f3902168e186a9554cf7dfb3d2b3,V90 3023-graph adversarial pool; observed class size 7,True,True
+e2+e8,5,6f2ed64ff6db264a33cea613d819999c5e47f3902168e186a9554cf7dfb3d2b3,V90 3023-graph adversarial pool; observed class size 7,True,True
+e2+e9,5,6f2ed64ff6db264a33cea613d819999c5e47f3902168e186a9554cf7dfb3d2b3,V90 3023-graph adversarial pool; observed class size 7,True,True
+e2+tree,5,b54d32812c2b2b360f5dc5b0eaf6813e59c05512c183f0b23b860e6dcc9d7c5d,V98 explicit size-63 class,True,True
+e3+e4,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 26,True,True
+e3+e5,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 315,True,True
+e3+e6,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 351,True,True
+e3+e7,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 351,True,True
+e3+e8,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 351,True,True
+e3+e9,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 351,True,True
+e3+tree,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 140,True,True
+e4+e5,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 57,True,True
+e4+e6,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 57,True,True
+e4+e7,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 57,True,True
+e4+e8,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 57,True,True
+e4+e9,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 57,True,True
+e4+tree,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 33,True,True
+e5+e6,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 924,True,True
+e5+e7,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 924,True,True
+e5+e8,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 924,True,True
+e5+e9,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 924,True,True
+e5+tree,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 292,True,True
+e6+e7,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 3023,True,True
+e6+e8,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 3023,True,True
+e6+e9,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 3023,True,True
+e6+tree,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 716,True,True
+e7+e8,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 3023,True,True
+e7+e9,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 3023,True,True
+e7+tree,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 716,True,True
+e8+e9,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 3023,True,True
+e8+tree,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 716,True,True
+e9+tree,5,0fdec56876b2508ae3c66d759b3b938369877ce2894b0f3d8b7328a4c15cc451,V90 3023-graph adversarial pool; observed class size 716,True,True

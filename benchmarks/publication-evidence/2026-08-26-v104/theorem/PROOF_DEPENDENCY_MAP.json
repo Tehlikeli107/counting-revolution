@@ -1,0 +1,11 @@
+{
+  "V75": "pure atomic minimum field count = 5",
+  "V90": "single-field exact/lower-bound closure; e4 max 57",
+  "V90.1": "correct generic class-rank proof using full V83 globally-injective key F; numerical single-field results unchanged",
+  "V91": "e2+e4 exact pair max 10",
+  "V92": "triple max 2 for e2+e4+e5/e6; e2+e4+tree exact max 4",
+  "V94": "explicit one-bit e2+e4+e6 construction",
+  "V96": "all pairs + arbitrary 1 bit impossible; min fields at 1 bit =3",
+  "V98": "all pairs + arbitrary 2 bits impossible; min fields at 2 bits =3",
+  "V100": "e2+e6 exact max 7; min fields at 3 bits =2"
+}

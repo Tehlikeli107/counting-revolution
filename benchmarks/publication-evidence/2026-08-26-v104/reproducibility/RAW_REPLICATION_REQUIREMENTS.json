@@ -1,0 +1,48 @@
+{
+  "graph10_catalog": {
+    "nonisomorphic_graphs": 12005168,
+    "gzip_bytes": 31112164,
+    "gzip_sha256": "a16f47a95e3e174f4b08042fec95dce8b67712b0e465b5097ffd9334dde2faf8",
+    "decompressed_bytes": 120051680,
+    "decompressed_sha256": "923cabf28082cba3ee296251d23eee21b32056b36cf4952e42958d468357df36"
+  },
+  "historical_result_certificates_required_for_full_proof_chain": {
+    "v75": {
+      "bytes": 54453,
+      "sha256": "d585835d4d694497dc9519b116bdace8df8c47a61b71bd71e9e06b2bed40e4d8"
+    },
+    "v90": {
+      "bytes": 76891,
+      "sha256": "f5e9ed38cb9de172d617cb3b29d938bf5c805b5788a0fadb931092b041f32299"
+    },
+    "v90_1": {
+      "bytes": 6524,
+      "sha256": "89b45b9c6efef26b29d1113f6e736fcc255e3e856a65f03259d63ea8cdb25583"
+    },
+    "v91": {
+      "bytes": 18252,
+      "sha256": "21c9bf7f03ef01d613cac78474f8049ae0203dc40732a49d236bd651081b6f4f"
+    },
+    "v92": {
+      "bytes": 793997,
+      "sha256": "4086dddf8e31e1bc43f288ab53a719deddb8f70413004c69418ecf89e0ecce02"
+    },
+    "v94": {
+      "bytes": 13169,
+      "sha256": "8e69f2bb2afb88961e256dfd4d49c5f6fa43047c97f2af78af06b3e1faf236a7"
+    },
+    "v96": {
+      "bytes": 13811,
+      "sha256": "b6e87b449f5be412d05a41658be110878b0b0cf3e56d975eb87a653e85ab1290"
+    },
+    "v98": {
+      "bytes": 10988,
+      "sha256": "8934c7255723200103771efacaa142371612f595b1d9b470d57b5ca185839c25"
+    },
+    "v100": {
+      "bytes": 14802,
+      "sha256": "fd93ca5b3959457334fa0cccad24a782e4ab31a31618ddafd57cf8b234b34f77"
+    }
+  },
+  "note": "V104 is a publication release candidate and certificate-verification bundle. Reproducing every historical 12M scan from raw catalog requires the corresponding historical scan source packages/scripts, not only these compact result certificates."
+}

@@ -1,0 +1,138 @@
+{
+  "version": "v105-preview",
+  "result": "PREVIEW_ONLY",
+  "source_release": "V104 publication release candidate",
+  "source_release_zip": {
+    "bytes": 68708,
+    "sha256": "37c5d58c6037fd79ebf88a2b3c5ff38392c17a465cb13d179af48cf0888549b7"
+  },
+  "proposed_repository_path": "benchmarks/publication-evidence/2026-08-26-v104",
+  "files": [
+    {
+      "path": "CITATION_AND_CLAIM_WORDING.md",
+      "bytes": 713,
+      "sha256": "08398798d45b1f5a14ad1e1ef08dc21936d4afe88e6b8eb034537648a9860c35"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2735,
+      "sha256": "cfddd5f3a720947f1e18923a20c885a9ed68a33b87f046e27a4147b48a9b46d0"
+    },
+    {
+      "path": "certificates/V101_FRONTIER_CERTIFICATE.zip",
+      "bytes": 12978,
+      "sha256": "673a7fecba42527d6660d2de66326fc7161903d615791d8f1c7a6921a43a6aaf"
+    },
+    {
+      "path": "certificates/V102_OBSTRUCTION_ATLAS_CERTIFICATE.zip",
+      "bytes": 15626,
+      "sha256": "d61ec14b151c25e820e892e014878f35fdb41a43dd154a2053e2672d698274f6"
+    },
+    {
+      "path": "certificates/V103_LITERATURE_AUDIT_CERTIFICATE.zip",
+      "bytes": 12347,
+      "sha256": "af5f08c3f2ed0da5939e0cee599fb070726f0108116f62d5247cb485054c624a"
+    },
+    {
+      "path": "evidence/FRONTIER_OBSTRUCTION_ATLAS_THEOREM.json",
+      "bytes": 2957,
+      "sha256": "d8191572ee8fbaac2a59ff9ef5ea0c4be3d8e4d1786eece1d528ee28b81a7597"
+    },
+    {
+      "path": "evidence/FRONTIER_OBSTRUCTION_ATLAS_THEOREM.md",
+      "bytes": 1325,
+      "sha256": "bfde41111c9beceed4dda4bc93d511db53c7b26c57ac72e5785f8ed84c50474f"
+    },
+    {
+      "path": "evidence/PAIR_OBSTRUCTION_SUMMARY.csv",
+      "bytes": 6325,
+      "sha256": "0b027e3a44e0838088421befb70cb44542f26c2cc3a5b0478f7e8825de62231e"
+    },
+    {
+      "path": "evidence/PAIR_SIZE5_OBSTRUCTION_ATLAS.csv",
+      "bytes": 47204,
+      "sha256": "32a12e9c6ab82e44b40cee7bb7aa7d674b4c478920ba82ee1b74307b38927eb4"
+    },
+    {
+      "path": "evidence/SINGLE_SIZE33_OBSTRUCTION_ATLAS.csv",
+      "bytes": 43053,
+      "sha256": "ef585622bce7f0a5bce03ddd3b5ab0672f06e3288bb55c3dd49e55903f109f7c"
+    },
+    {
+      "path": "literature/CLAIM_NOVELTY_MATRIX.csv",
+      "bytes": 1497,
+      "sha256": "9b55ddcfbdb381b9059b72e53457f9f8beb03355352ad310694c99c433941ee3"
+    },
+    {
+      "path": "literature/PAPER_OUTLINE.md",
+      "bytes": 2422,
+      "sha256": "bc6bd031bc2cae9e8cd7b814d38ce26f909ca4a32c92d8af1217d4c4470ea150"
+    },
+    {
+      "path": "literature/PRELIMINARY_LITERATURE_NOVELTY_AUDIT.md",
+      "bytes": 7859,
+      "sha256": "dfcb115498954bd9414bd02c1eed79f89fe5cd2c04169e91772ef4e70abc597b"
+    },
+    {
+      "path": "literature/PUBLICATION_READINESS_SUMMARY.json",
+      "bytes": 759,
+      "sha256": "8af01682161017d04ff2ed60e5cba8e713e374076d475cadca4151b2073bb58f"
+    },
+    {
+      "path": "literature/REFERENCES.bib",
+      "bytes": 3133,
+      "sha256": "cd45e0be07c6c98929d103676cb590771e069dcb502123c462217e7320386fa6"
+    },
+    {
+      "path": "literature/REPRODUCIBILITY_RELEASE_CHECKLIST.md",
+      "bytes": 1609,
+      "sha256": "9bb7f064ce42ee99e3e51558143f6f3827a5714b2aa454848ffc78b47a8b9b1a"
+    },
+    {
+      "path": "reproducibility/RAW_REPLICATION_REQUIREMENTS.json",
+      "bytes": 1771,
+      "sha256": "0f77828850c7eb1781faae599fee0d0b9fda692fa297e1e3073f645725c09b69"
+    },
+    {
+      "path": "reproducibility/RELEASE_MANIFEST.json",
+      "bytes": 4821,
+      "sha256": "98e2065395f06f9def8739cc298a568bd89e81809ff8933da0febb478e8d124c"
+    },
+    {
+      "path": "reproducibility/THEOREM_DEPENDENCY_DAG.json",
+      "bytes": 2637,
+      "sha256": "61c70bc5fa21550eb2260d501e95e5c7f3730bd3c759634d97b4806987079b4d"
+    },
+    {
+      "path": "reproducibility/VERIFY_RELEASE.py",
+      "bytes": 3970,
+      "sha256": "1d2498a7a62bab96d898c079fffb270fa7cabdfe68cbbae7fe9a0dd79002faf6"
+    },
+    {
+      "path": "theorem/INFORMATION_FRONTIER_THEOREM.json",
+      "bytes": 6367,
+      "sha256": "aed64fdcc8e26e6ef3e85b113fd4408eeffe07c5a03c058b7da1d20e8fa4d5fe"
+    },
+    {
+      "path": "theorem/INFORMATION_FRONTIER_THEOREM.md",
+      "bytes": 930,
+      "sha256": "f629c98d6bfe6023ae93d250257e51742e184589745621a2223efab20f1d66a2"
+    },
+    {
+      "path": "theorem/PAPER_READY_CLAIMS.md",
+      "bytes": 1022,
+      "sha256": "0fec703b86cf765c4a5aed83f1310ba95b1f291d31583a363023e64ffeb702ce"
+    },
+    {
+      "path": "theorem/PROOF_DEPENDENCY_MAP.json",
+      "bytes": 611,
+      "sha256": "061b81cf6a37ef6242b3febd6bb750d6138c2e7a83df0d59f977224b444d5fbc"
+    },
+    {
+      "path": "theorem/information_frontier_0_to_6_bits.csv",
+      "bytes": 1395,
+      "sha256": "534075d35bb6cc9231ac363a970a511301debf6ae50a8dfa0fa48f380965e732"
+    }
+  ],
+  "scope": "Additive publication evidence only. Existing V47/V51/V54/V59/V64/V67 snapshots remain untouched."
+}

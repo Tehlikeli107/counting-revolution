@@ -1,0 +1,21 @@
+{
+  "version": "v103",
+  "result": "OK",
+  "validated_certificates": [
+    "V101",
+    "V102"
+  ],
+  "frozen_frontier": [
+    5,
+    3,
+    3,
+    2,
+    2,
+    2,
+    1
+  ],
+  "literature_snapshot_date": "2026-08-26",
+  "novelty_status": "Potentially novel specific finite-n=10 frontier/certificate architecture; direct prior match not found in the searched literature, but novelty/priority is not established conclusively.",
+  "closest_prior_computational_work": "Dehmer, Emmert-Streib & Grabner (Information Sciences, 2014), complete multivariate graph invariant on exhaustive connected n=9/n=10 graphs.",
+  "publication_status": "Ready for manuscript/release consolidation; not yet ready for first/novel/world-first priority claims."
+}

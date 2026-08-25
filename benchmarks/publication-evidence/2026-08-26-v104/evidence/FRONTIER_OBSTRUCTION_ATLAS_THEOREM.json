@@ -1,0 +1,69 @@
+{
+  "version": "v102",
+  "catalog_graphs": 12005168,
+  "atomic_family": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6",
+    "e7",
+    "e8",
+    "e9",
+    "tree"
+  ],
+  "frozen_frontier_from_V101": [
+    5,
+    3,
+    3,
+    2,
+    2,
+    2,
+    1
+  ],
+  "pair_obstruction_atlas": {
+    "atomic_pairs": 45,
+    "explicit_graphs_per_pair": 5,
+    "total_explicit_graph_rows": 225,
+    "pairwise_nonisomorphism_checks": 450,
+    "all_45_verified_same_aligned_pair_signature": true,
+    "consequence": "Every atomic pair has an explicit collision class of size at least 5. Therefore no arbitrary deterministic 1-bit or 2-bit side channel can repair any atomic pair.",
+    "capacity_comparison": {
+      "1_bit": 2,
+      "2_bits": 4,
+      "witness_size": 5
+    }
+  },
+  "single_field_obstruction_atlas": {
+    "atomic_fields": 10,
+    "explicit_graphs_per_field": 33,
+    "total_explicit_graph_rows": 330,
+    "pairwise_nonisomorphism_checks": 5280,
+    "all_10_verified_same_single_field_signature": true,
+    "consequence": "Every atomic single-field base has an explicit collision class of size at least 33. Therefore no arbitrary deterministic 3-bit, 4-bit, or 5-bit channel can repair any single field.",
+    "capacity_comparison": {
+      "3_bits": 8,
+      "4_bits": 16,
+      "5_bits": 32,
+      "witness_size": 33
+    },
+    "note": "V90/V90.1 provide stronger exact/lower state bounds (best single e4 requires 57 states); the 33-graph atlas is a compact explicit obstruction sufficient for the 3..5-bit field-count lower bounds."
+  },
+  "other_frontier_lower_bounds": {
+    "0_bits": "V75 exhaustively proves all atomic subsets of size <=4 incomplete; this lower bound is exhaustive-lattice based rather than represented by a single universal obstruction set.",
+    "6_bits_zero_fields": "With zero atomic fields, a 6-bit channel has at most 64 outputs for 12,005,168 graphs; counting alone rules out zero fields."
+  },
+  "upper_bounds_from_frozen_frontier": {
+    "0_bits": "V75 five-field complete subset",
+    "1_bit": "V94 explicit e2+e4+e6+h",
+    "2_bits": "V92 e2+e4+tree max class 4",
+    "3_bits": "V100 e2+e6 max class 7",
+    "4_bits": "V91 e2+e4 max class 10",
+    "5_bits": "V91 e2+e4 max class 10",
+    "6_bits": "V90/V90.1 e4 max class 57"
+  },
+  "claim_scope": "Exact finite n=10 obstruction atlas for the explicit deleted-card atomic family {e1..e9,tree}. Pair records preserve within-card field alignment. Impossibility consequences allow arbitrary deterministic side channels of the stated bit width. This is not a general graph-isomorphism or reconstruction theorem.",
+  "next_phase": "Use this atlas together with V101 as the self-contained evidence layer for paper/reproducibility consolidation and literature/novelty calibration; do not resume serial full-catalog scans without a specific theorem gap.",
+  "elapsed_seconds": 2.1769299507141113
+}

@@ -1,0 +1,9 @@
+claim,status,basis,publication_guidance
+Full vertex deck reconstructs every n=10 graph,Prior art / not novel,McKay2022,Do not present as contribution.
+A multivariate combination of graph invariants can perfectly distinguish n=10 graphs,Prior art in broad form,DehmerEtAl2014,Their reported class is connected graphs; still blocks broad novelty wording.
+Vertex-deleted characteristic-polynomial/spectral data are useful for reconstruction,Classical prior art,Tutte1979;ScirihaStanic2023;Farrugia2021,Use as theoretical background.
+Spanning-tree/subgraph-count information is reconstructible from the full deck,Classical reconstruction context,Tutte1979;BondyHemminger1977,Do not claim new reconstructibility of tree count.
+"Exact frontier [5,3,3,2,2,2,1] for aligned {e1..e9,tree} on all 12,005,168 n=10 graphs",Potentially novel; direct match not found,V101 + current literature search,Novelty not conclusively established; retain finite-n=10/fixed-family scope.
+45-pair size-5 and 10-single size-33 explicit obstruction atlas,Potentially novel; direct match not found,V102 + current literature search,Frame as certificate architecture supporting this specific frontier.
+e2+e6 exact maximum collision class 7,Potentially novel computational datum,V100,State only for complete n=10 catalog and aligned e2+e6 projection.
+V94 explicit mod-127 one-bit realization,Potentially novel construction; direct match not found,V94,Finite-catalog calibrated mask; do not oversell as natural/general invariant.

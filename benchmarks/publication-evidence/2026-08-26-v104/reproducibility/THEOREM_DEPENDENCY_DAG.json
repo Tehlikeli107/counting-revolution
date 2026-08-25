@@ -1,0 +1,154 @@
+{
+  "version": "v104",
+  "root_claim": "finite_n10_information_frontier",
+  "root_result": [
+    5,
+    3,
+    3,
+    2,
+    2,
+    2,
+    1
+  ],
+  "nodes": {
+    "V75": {
+      "claim": "0-bit minimum atomic fields = 5",
+      "type": "source certificate"
+    },
+    "V90": {
+      "claim": "single-field closure; e4 exact max class 57",
+      "type": "source certificate"
+    },
+    "V90.1": {
+      "claim": "corrected generic rank proof using full V83 injective key",
+      "type": "source certificate"
+    },
+    "V91": {
+      "claim": "e2+e4 exact max class 10",
+      "type": "source certificate"
+    },
+    "V92": {
+      "claim": "e2+e4+tree exact max class 4; one-bit triples max class 2",
+      "type": "source certificate"
+    },
+    "V94": {
+      "claim": "explicit finite-n10 one-bit construction",
+      "type": "source certificate"
+    },
+    "V96": {
+      "claim": "all pairs + arbitrary 1 bit impossible",
+      "type": "source certificate"
+    },
+    "V98": {
+      "claim": "all pairs + arbitrary 2 bits impossible",
+      "type": "source certificate"
+    },
+    "V100": {
+      "claim": "e2+e6 exact max class 7; 3-bit minimum fields = 2",
+      "type": "source certificate"
+    },
+    "V101": {
+      "claim": "frontier consolidation [5,3,3,2,2,2,1]",
+      "type": "consolidation"
+    },
+    "V102": {
+      "claim": "explicit obstruction atlas supporting pair/single lower bounds",
+      "type": "consolidation"
+    },
+    "V103": {
+      "claim": "publication-readiness and preliminary literature audit",
+      "type": "claim-safety"
+    }
+  },
+  "edges": [
+    [
+      "V75",
+      "V101"
+    ],
+    [
+      "V90",
+      "V101"
+    ],
+    [
+      "V90.1",
+      "V101"
+    ],
+    [
+      "V91",
+      "V101"
+    ],
+    [
+      "V92",
+      "V101"
+    ],
+    [
+      "V94",
+      "V101"
+    ],
+    [
+      "V96",
+      "V101"
+    ],
+    [
+      "V98",
+      "V101"
+    ],
+    [
+      "V100",
+      "V101"
+    ],
+    [
+      "V86",
+      "V102"
+    ],
+    [
+      "V88",
+      "V102"
+    ],
+    [
+      "V90",
+      "V102"
+    ],
+    [
+      "V91",
+      "V102"
+    ],
+    [
+      "V97.1",
+      "V102"
+    ],
+    [
+      "V98",
+      "V102"
+    ],
+    [
+      "V100",
+      "V102"
+    ],
+    [
+      "V101",
+      "V102"
+    ],
+    [
+      "V101",
+      "V103"
+    ],
+    [
+      "V102",
+      "V103"
+    ],
+    [
+      "V101",
+      "V104"
+    ],
+    [
+      "V102",
+      "V104"
+    ],
+    [
+      "V103",
+      "V104"
+    ]
+  ],
+  "scope": "complete finite n=10 non-isomorphic simple graph catalog; explicit aligned atomic deleted-card family {e1,...,e9,tree}; no general GI/reconstruction/novelty claim"
+}
