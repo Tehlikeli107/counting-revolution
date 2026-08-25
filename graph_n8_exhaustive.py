@@ -1,267 +1,439 @@
 """
-Exhaustive n=8 Proof via McKay Graph Catalog
-=============================================
-Instead of enumerating 268M labeled graphs, download all 12,346
-non-isomorphic graphs on 8 vertices from Brendan McKay's database.
+Finite n=8 validation via Brendan McKay's complete graph catalog.
 
-McKay's graph6 format stores graphs compactly. We parse each one,
-compute our counting signature, and verify all 12,346 are distinct.
+This script evaluates the repository's historical 13-component counting signature
+on all 12,346 non-isomorphic simple graphs on 8 vertices in McKay's catalog.
 
-If #distinct signatures == 12,346 -> PROVEN COMPLETE for n=8!
+The validated publication evidence is committed separately at:
 
-Source: http://users.cecs.anu.edu.au/~bdm/data/graphs.html
+- benchmarks/publication-evidence/2026-08-25-v51/
+- benchmarks/publication-evidence/2026-08-25-v54/
+
+Later finite-order boundary/refinement evidence is at:
+
+- benchmarks/publication-evidence/2026-08-25-v59/
+- benchmarks/publication-evidence/2026-08-25-v64/
+- benchmarks/publication-evidence/2026-08-25-v67/
+
+Scope: a collision-free result here is a finite statement about this exact
+signature on the complete order-8 catalog. It is not a general graph-isomorphism
+theorem, an asymptotic result, or a novelty/priority claim.
 """
 
-import numpy as np
-import networkx as nx
-from itertools import combinations
 from collections import Counter
-import time
-import sys
-import urllib.request
-import gzip
+from itertools import combinations
+import hashlib
 import os
+import sys
+import time
+import urllib.request
+
+import networkx as nx
+import numpy as np
 
 
-EXPECTED_N8 = 12346
-CACHE_DIR = os.path.join(os.path.dirname(__file__), 'graph_data')
-GRAPH8_FILE = os.path.join(CACHE_DIR, 'graph8.g6')
+EXPECTED_N8 = 12_346
+GRAPH8_URL = "https://users.cecs.anu.edu.au/~bdm/data/graph8.g6"
+EXPECTED_GRAPH8_BYTES = 86_422
+EXPECTED_GRAPH8_SHA256 = (
+    "546a249902101c97d3aa590f93e53366854bd0a6f405aa59bdb32d25c57f845a"
+)
+
+CACHE_DIR = os.path.join(os.path.dirname(__file__), "graph_data")
+GRAPH8_FILE = os.path.join(CACHE_DIR, "graph8.g6")
+
+
+def sha256_file(filepath):
+    h = hashlib.sha256()
+    with open(filepath, "rb") as f:
+        for block in iter(lambda: f.read(1024 * 1024), b""):
+            h.update(block)
+    return h.hexdigest()
+
+
+def validate_graph_catalog(filepath):
+    """Require the exact graph8.g6 bytes used by the committed evidence."""
+    size = os.path.getsize(filepath)
+    digest = sha256_file(filepath)
+
+    if size != EXPECTED_GRAPH8_BYTES:
+        raise RuntimeError(
+            f"graph8.g6 byte-count mismatch: got {size}, "
+            f"expected {EXPECTED_GRAPH8_BYTES}"
+        )
+    if digest != EXPECTED_GRAPH8_SHA256:
+        raise RuntimeError(
+            "graph8.g6 SHA-256 mismatch: "
+            f"got {digest}, expected {EXPECTED_GRAPH8_SHA256}"
+        )
 
 
 def download_graph_catalog():
-    """Download McKay's catalog of all non-isomorphic graphs on 8 vertices."""
+    """Return a locally cached, checksum-validated McKay order-8 catalog."""
     os.makedirs(CACHE_DIR, exist_ok=True)
 
     if os.path.exists(GRAPH8_FILE):
-        print(f"  Using cached catalog: {GRAPH8_FILE}")
-        return
+        validate_graph_catalog(GRAPH8_FILE)
+        print(f"  Using checksum-validated catalog: {GRAPH8_FILE}")
+        return GRAPH8_FILE
 
-    # Try graph6 format (uncompressed)
-    url = "https://users.cecs.anu.edu.au/~bdm/data/graph8.g6"
-    print(f"  Downloading from {url}...")
+    temp_file = GRAPH8_FILE + ".download"
+    if os.path.exists(temp_file):
+        os.remove(temp_file)
 
+    print(f"  Downloading exact catalog from {GRAPH8_URL}...")
     try:
-        urllib.request.urlretrieve(url, GRAPH8_FILE)
-        print(f"  Downloaded to {GRAPH8_FILE}")
-    except Exception as e:
-        print(f"  Download failed: {e}")
-        print(f"  Trying compressed version...")
-        url_gz = url + ".gz"
-        gz_file = GRAPH8_FILE + ".gz"
-        try:
-            urllib.request.urlretrieve(url_gz, gz_file)
-            with gzip.open(gz_file, 'rb') as f_in:
-                with open(GRAPH8_FILE, 'wb') as f_out:
-                    f_out.write(f_in.read())
-            os.remove(gz_file)
-            print(f"  Decompressed to {GRAPH8_FILE}")
-        except Exception as e2:
-            print(f"  Download failed: {e2}")
-            print(f"  Will generate graphs using networkx instead.")
-            return
+        urllib.request.urlretrieve(GRAPH8_URL, temp_file)
+        validate_graph_catalog(temp_file)
+        os.replace(temp_file, GRAPH8_FILE)
+    except Exception:
+        if os.path.exists(temp_file):
+            os.remove(temp_file)
+        raise
 
-
-def generate_graphs_nx(n):
-    """Generate all non-iso graphs on n vertices using networkx graph_atlas for n<=7,
-    or generate systematically for n=8 using canonical deletion."""
-    # For n=8, networkx doesn't have a direct generator for all graphs.
-    # We'll use a different approach: enumerate and filter.
-    # But this is too slow for n=8 (268M graphs).
-    # Instead, let's try to use networkx's graph6 parsing if we have the file.
-    pass
+    print(f"  Downloaded and validated: {GRAPH8_FILE}")
+    return GRAPH8_FILE
 
 
 def load_graphs_from_g6(filepath):
-    """Load all graphs from a graph6 file."""
+    """Parse every graph6 record; malformed records are fatal, not skipped."""
+    validate_graph_catalog(filepath)
+
     graphs = []
-    with open(filepath, 'r') as f:
-        for line in f:
-            line = line.strip()
-            if line and not line.startswith('>'):
-                try:
-                    G = nx.from_graph6_bytes(line.encode('ascii'))
-                    graphs.append(G)
-                except:
-                    pass
+    with open(filepath, "rb") as f:
+        for line_no, raw in enumerate(f, 1):
+            record = raw.rstrip(b"\r\n")
+            if not record:
+                raise RuntimeError(f"blank graph6 record at line {line_no}")
+            if record.startswith(b">>graph6<<"):
+                raise RuntimeError(
+                    f"unexpected graph6 header at line {line_no}; "
+                    "the provenance-bound graph8.g6 capture has no header"
+                )
+            try:
+                graph = nx.from_graph6_bytes(record)
+            except Exception as exc:
+                raise RuntimeError(
+                    f"invalid graph6 record at line {line_no}: {exc}"
+                ) from exc
+
+            if graph.number_of_nodes() != 8:
+                raise RuntimeError(
+                    f"unexpected graph order at line {line_no}: "
+                    f"{graph.number_of_nodes()}"
+                )
+            graphs.append(graph)
+
+    if len(graphs) != EXPECTED_N8:
+        raise RuntimeError(
+            f"catalog record-count mismatch: got {len(graphs)}, expected {EXPECTED_N8}"
+        )
+
     return graphs
 
 
+def bareiss_det(matrix):
+    """Exact integer determinant using fraction-free Bareiss elimination."""
+    a = [list(map(int, row)) for row in matrix]
+    n = len(a)
+
+    if n == 0:
+        return 1
+    if n == 1:
+        return a[0][0]
+
+    sign = 1
+    previous_pivot = 1
+
+    for k in range(n - 1):
+        if a[k][k] == 0:
+            swap = next(
+                (row for row in range(k + 1, n) if a[row][k] != 0),
+                None,
+            )
+            if swap is None:
+                return 0
+            a[k], a[swap] = a[swap], a[k]
+            sign *= -1
+
+        pivot = a[k][k]
+
+        for i in range(k + 1, n):
+            for j in range(k + 1, n):
+                numerator = a[i][j] * pivot - a[i][k] * a[k][j]
+                if k > 0:
+                    if numerator % previous_pivot != 0:
+                        raise ArithmeticError(
+                            "Bareiss exact division failed unexpectedly"
+                        )
+                    numerator //= previous_pivot
+                a[i][j] = numerator
+
+        previous_pivot = pivot
+
+        for i in range(k + 1, n):
+            a[i][k] = 0
+        for j in range(k + 1, n):
+            a[k][j] = 0
+
+    return sign * a[n - 1][n - 1]
+
+
+def exact_spanning_tree_count(adj):
+    """Exact Matrix-Tree theorem count."""
+    n = adj.shape[0]
+    if n <= 1:
+        return 1
+
+    a = adj.astype(np.int64, copy=False)
+    degrees = a.sum(axis=1).astype(np.int64)
+    laplacian = np.diag(degrees) - a
+    return int(bareiss_det(laplacian[1:, 1:].tolist()))
+
+
 def compute_counting_signature(adj, n):
-    """Full polynomial-time counting signature."""
-    A = adj.astype(np.int64)
+    """Compute the historical 13 top-level counting-signature components."""
+    a = adj.astype(np.int64)
     degs_raw = adj.sum(axis=1)
     degs = tuple(sorted(degs_raw.tolist()))
 
-    Ak = np.eye(n, dtype=np.int64)
+    ak = np.eye(n, dtype=np.int64)
     traces = []
-    for k in range(1, n + 1):
-        Ak = Ak @ A
-        traces.append(int(np.trace(Ak)))
+    for _ in range(1, n + 1):
+        ak = ak @ a
+        traces.append(int(np.trace(ak)))
 
-    e = [1]
+    elementary = [1]
     for k in range(1, n + 1):
-        s = 0
+        total = 0
         for i in range(1, k + 1):
-            s += ((-1) ** (i - 1)) * e[k - i] * traces[i - 1]
-        e.append(s // k)
-    char_coeffs = tuple(e[1:])
+            total += (
+                ((-1) ** (i - 1))
+                * elementary[k - i]
+                * traces[i - 1]
+            )
+        if total % k != 0:
+            raise ArithmeticError(
+                f"Newton-identity exact division failed at coefficient {k}"
+            )
+        elementary.append(total // k)
+    char_coeffs = tuple(elementary[1:])
 
     visited = set()
     n_comp = 0
     dist_hist = {}
     wiener = 0
     eccs = []
+
     for start in range(n):
         if start not in visited:
             n_comp += 1
-        d = [-1] * n
-        d[start] = 0
-        q = [start]; qi = 0
-        while qi < len(q):
-            v = q[qi]; qi += 1
-            visited.add(v)
-            for u in range(n):
-                if adj[v, u] and d[u] < 0:
-                    d[u] = d[v] + 1
-                    q.append(u)
-        eccs.append(max(x for x in d if x >= 0))
+
+        distance = [-1] * n
+        distance[start] = 0
+        queue = [start]
+        qi = 0
+
+        while qi < len(queue):
+            vertex = queue[qi]
+            qi += 1
+            visited.add(vertex)
+
+            for neighbor in range(n):
+                if adj[vertex, neighbor] and distance[neighbor] < 0:
+                    distance[neighbor] = distance[vertex] + 1
+                    queue.append(neighbor)
+
+        eccs.append(max(x for x in distance if x >= 0))
+
         for j in range(start + 1, n):
-            dj = d[j]
-            if dj >= 0:
-                dist_hist[dj] = dist_hist.get(dj, 0) + 1
-                wiener += dj
+            d = distance[j]
+            if d >= 0:
+                dist_hist[d] = dist_hist.get(d, 0) + 1
+                wiener += d
             else:
                 dist_hist[-1] = dist_hist.get(-1, 0) + 1
 
-    if n > 1:
-        L = np.diag(degs_raw.astype(np.float64)) - adj.astype(np.float64)
-        n_span = round(np.linalg.det(L[1:, 1:]))
-    else:
-        n_span = 1
+    n_span = exact_spanning_tree_count(adj)
 
-    clust = []
-    for v in range(n):
-        nbrs = [u for u in range(n) if adj[v, u]]
-        k = len(nbrs)
-        if k < 2:
-            clust.append((0, 1))
+    clustering = []
+    for vertex in range(n):
+        neighbors = [u for u in range(n) if adj[vertex, u]]
+        degree = len(neighbors)
+
+        if degree < 2:
+            clustering.append((0, 1))
         else:
-            tri = sum(1 for i in range(len(nbrs)) for j in range(i+1, len(nbrs))
-                      if adj[nbrs[i], nbrs[j]])
-            clust.append((2 * tri, k * (k - 1)))
+            triangles = sum(
+                1
+                for i in range(len(neighbors))
+                for j in range(i + 1, len(neighbors))
+                if adj[neighbors[i], neighbors[j]]
+            )
+            clustering.append((2 * triangles, degree * (degree - 1)))
 
-    ndp = tuple(sorted(
-        tuple(sorted(int(adj[u].sum()) for u in range(n) if adj[v, u]))
-        for v in range(n)
-    ))
+    neighbor_degree_profile = tuple(
+        sorted(
+            tuple(
+                sorted(
+                    int(adj[u].sum())
+                    for u in range(n)
+                    if adj[vertex, u]
+                )
+            )
+            for vertex in range(n)
+        )
+    )
 
-    ecn = []; ncn = []
+    edge_common_neighbors = []
+    nonedge_common_neighbors = []
+
     for u in range(n):
         for v in range(u + 1, n):
-            cn = sum(1 for w in range(n) if adj[u, w] and adj[v, w])
-            (ecn if adj[u, v] else ncn).append(cn)
+            common = sum(
+                1
+                for w in range(n)
+                if adj[u, w] and adj[v, w]
+            )
+            if adj[u, v]:
+                edge_common_neighbors.append(common)
+            else:
+                nonedge_common_neighbors.append(common)
 
-    sub4 = ()
+    induced4_profile = ()
     if n >= 4:
         types = Counter()
-        for sub in combinations(range(n), 4):
-            sd = [0, 0, 0, 0]
+
+        for subset in combinations(range(n), 4):
+            sub_degrees = [0, 0, 0, 0]
+
             for i in range(4):
                 for j in range(i + 1, 4):
-                    if adj[sub[i], sub[j]]:
-                        sd[i] += 1; sd[j] += 1
-            types[tuple(sorted(sd))] += 1
-        sub4 = tuple(sorted(types.items()))
+                    if adj[subset[i], subset[j]]:
+                        sub_degrees[i] += 1
+                        sub_degrees[j] += 1
+
+            types[tuple(sorted(sub_degrees))] += 1
+
+        induced4_profile = tuple(sorted(types.items()))
 
     return (
-        degs, tuple(traces), char_coeffs,
-        n_comp, tuple(sorted(dist_hist.items())), wiener, tuple(sorted(eccs)),
-        n_span, tuple(sorted(clust)), ndp,
-        tuple(sorted(ecn)), tuple(sorted(ncn)),
-        sub4,
+        degs,
+        tuple(traces),
+        char_coeffs,
+        n_comp,
+        tuple(sorted(dist_hist.items())),
+        wiener,
+        tuple(sorted(eccs)),
+        n_span,
+        tuple(sorted(clustering)),
+        neighbor_degree_profile,
+        tuple(sorted(edge_common_neighbors)),
+        tuple(sorted(nonedge_common_neighbors)),
+        induced4_profile,
     )
 
 
 def main():
-    print("=" * 70)
-    print("  EXHAUSTIVE n=8 PROOF via McKay Graph Catalog")
-    print("=" * 70)
+    print("=" * 76)
+    print("  FINITE n=8 VALIDATION via McKay complete graph catalog")
+    print("=" * 76)
 
-    # Step 1: Get the graph catalog
-    download_graph_catalog()
+    catalog_path = download_graph_catalog()
 
-    if os.path.exists(GRAPH8_FILE):
-        print(f"\n  Loading graphs from catalog...")
-        t0 = time.time()
-        graphs = load_graphs_from_g6(GRAPH8_FILE)
-        t_load = time.time() - t0
-        print(f"  Loaded {len(graphs)} graphs in {t_load:.1f}s")
-    else:
-        print(f"\n  Catalog not available. Generating via networkx...")
-        # Fallback: generate all graphs on 8 vertices using edge enumeration
-        # with graph-tool style canonical form. Too slow without nauty.
-        print(f"  ERROR: Cannot generate n=8 without catalog. Aborting.")
-        return
+    print("\n  Loading checksum-bound catalog...")
+    load_start = time.time()
+    graphs = load_graphs_from_g6(catalog_path)
+    load_elapsed = time.time() - load_start
+    print(f"  Loaded {len(graphs):,} graphs in {load_elapsed:.1f}s")
 
-    if len(graphs) != EXPECTED_N8:
-        print(f"  WARNING: Got {len(graphs)} graphs, expected {EXPECTED_N8}")
+    print(f"\n  Computing 13-component signatures for {len(graphs):,} graphs...")
+    signature_start = time.time()
 
-    # Step 2: Compute counting signatures for all graphs
-    print(f"\n  Computing counting signatures for {len(graphs)} graphs...")
-    t0 = time.time()
-
-    signatures = {}  # sig -> graph index
+    signatures = {}
     collisions = []
 
-    for idx, G in enumerate(graphs):
-        n = G.number_of_nodes()
-        adj = nx.to_numpy_array(G, dtype=np.int32)
-        sig = compute_counting_signature(adj, n)
+    for index, graph in enumerate(graphs):
+        adjacency = nx.to_numpy_array(
+            graph,
+            nodelist=list(range(8)),
+            dtype=np.int32,
+        )
+        signature = compute_counting_signature(adjacency, 8)
 
-        if sig in signatures:
-            collisions.append((signatures[sig], idx))
-            print(f"    COLLISION! Graph {signatures[sig]} and {idx} share signature")
-            print(f"    Degree seq: {sig[0]}")
+        if signature in signatures:
+            collisions.append((signatures[signature], index))
+            print(
+                f"    COLLISION: catalog indices "
+                f"{signatures[signature]} and {index}"
+            )
         else:
-            signatures[sig] = idx
+            signatures[signature] = index
 
-        if (idx + 1) % 2000 == 0:
-            elapsed = time.time() - t0
-            rate = (idx + 1) / elapsed
-            eta = (len(graphs) - idx - 1) / rate
-            print(f"    {idx+1:>6}/{len(graphs)} | {len(signatures):,} distinct sigs "
-                  f"| {elapsed:.0f}s | ETA {eta:.0f}s")
+        if (index + 1) % 2000 == 0:
+            elapsed = time.time() - signature_start
+            rate = (index + 1) / elapsed
+            remaining = (len(graphs) - index - 1) / rate
+            print(
+                f"    {index + 1:>6}/{len(graphs)} | "
+                f"{len(signatures):,} distinct | "
+                f"{elapsed:.0f}s | ETA {remaining:.0f}s"
+            )
             sys.stdout.flush()
 
-    t_sig = time.time() - t0
-    n_sigs = len(signatures)
+    signature_elapsed = time.time() - signature_start
 
-    print(f"\n{'='*70}")
-    print(f"  RESULT (n=8, EXHAUSTIVE)")
-    print(f"{'='*70}")
-    print(f"  Total non-iso graphs: {len(graphs)}")
-    print(f"  Distinct counting signatures: {n_sigs}")
-    print(f"  Collisions: {len(collisions)}")
-    print(f"  Time: {t_sig:.1f}s ({t_sig/60:.1f} min)")
+    print(f"\n{'=' * 76}")
+    print("  RESULT — finite complete order-8 catalog")
+    print(f"{'=' * 76}")
+    print(f"  Catalog graphs: {len(graphs):,}")
+    print(f"  Distinct signatures: {len(signatures):,}")
+    print(f"  Collision groups observed by this pass: {len(collisions):,}")
+    print(
+        f"  Time: {signature_elapsed:.1f}s "
+        f"({signature_elapsed / 60:.1f} min)"
+    )
 
-    if n_sigs == len(graphs) and len(collisions) == 0:
-        print(f"\n  *** PROVEN: Counting = COMPLETE classification for n=8! ***")
-        print(f"  {n_sigs} signatures = {len(graphs)} iso classes = PERFECT!")
-        print(f"\n  Combined with n<=7 proof:")
-        print(f"  THEOREM: Polynomial-time counting invariants provide")
-        print(f"  complete graph isomorphism classification for ALL")
-        print(f"  simple graphs on n <= 8 vertices.")
+    if len(signatures) == EXPECTED_N8 and not collisions:
+        print(
+            "\n  VALIDATED FINITE RESULT: this exact 13-component signature is "
+            "collision-free on McKay's complete order-8 catalog."
+        )
+        print(
+            "  Publication evidence: "
+            "benchmarks/publication-evidence/2026-08-25-v51/"
+        )
+        print(
+            "  Component-minimality evidence: "
+            "benchmarks/publication-evidence/2026-08-25-v54/"
+        )
+        print(
+            "\n  Scope: order 8 only. This output is not a general graph-"
+            "isomorphism theorem and makes no claim for larger graph orders."
+        )
     else:
-        print(f"\n  INCOMPLETE: {len(collisions)} collision(s)")
-        for c in collisions:
-            print(f"    Graphs {c[0]} and {c[1]} share same signature")
-            # Show the graphs
-            G1 = graphs[c[0]]
-            G2 = graphs[c[1]]
-            print(f"    G1: {G1.number_of_edges()} edges, connected={nx.is_connected(G1)}")
-            print(f"    G2: {G2.number_of_edges()} edges, connected={nx.is_connected(G2)}")
-            print(f"    Isomorphic: {nx.is_isomorphic(G1, G2)}")
+        print(
+            f"\n  INCOMPLETE ON THIS CATALOG: "
+            f"{len(collisions):,} repeated signature(s)"
+        )
+
+        for first, second in collisions:
+            graph1 = graphs[first]
+            graph2 = graphs[second]
+            print(f"    Catalog indices {first} and {second}")
+            print(
+                f"      G1: {graph1.number_of_edges()} edges, "
+                f"connected={nx.is_connected(graph1)}"
+            )
+            print(
+                f"      G2: {graph2.number_of_edges()} edges, "
+                f"connected={nx.is_connected(graph2)}"
+            )
+            print(
+                f"      NetworkX isomorphic: "
+                f"{nx.is_isomorphic(graph1, graph2)}"
+            )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
