@@ -1,10 +1,16 @@
 {
-  "version": "v111",
-  "result": "CORRECTION_PREVIEW",
+  "version": "v104.1-correction",
+  "result": "OK",
+  "status": "APPLIED_ADDITIVE_CORRECTION",
   "correction_path": "benchmarks/publication-evidence/2026-08-26-v104-1",
   "source_tag": "v0.1.0",
   "source_dependency_dag_path": "benchmarks/publication-evidence/2026-08-26-v104/reproducibility/THEOREM_DEPENDENCY_DAG.json",
   "source_dependency_dag_git_blob_sha": "cb02846ed3914764aafe6a095fc2566b037c2532",
+  "initial_correction_checkpoint": {
+    "tag": "v0.1.1",
+    "commit": "4d114a32be323467fc90bef4ba9f67fa883e046b",
+    "release_status": "DRAFT_UNPUBLISHED"
+  },
   "frontier": [
     5,
     3,
@@ -15,11 +21,12 @@
     1
   ],
   "scientific_result_changed": false,
+  "certificate_payload_changed": false,
   "files": [
     {
       "path": "README.md",
-      "bytes": 1415,
-      "sha256": "acb136aceb6465d4aa11da41b2ff3683825bee2fb2071afa9cac9a0f844f229f"
+      "bytes": 1907,
+      "sha256": "18d78f51c6824e87e728a0d5464cf4ac1823e925e0b93da25c00c7c3d8eba264"
     },
     {
       "path": "reproducibility/THEOREM_DEPENDENCY_DAG_CORRECTED.json",

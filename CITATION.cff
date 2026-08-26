@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: "Kurnaz"
     given-names: "Salih Can"
-version: "0.1.1"
+version: "0.1.2"
 date-released: "2026-08-26"
 repository-code: "https://github.com/salihcankurnaz/counting-revolution"
 url: "https://github.com/salihcankurnaz/counting-revolution"

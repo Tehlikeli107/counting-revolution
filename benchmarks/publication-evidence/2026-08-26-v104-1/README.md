@@ -45,6 +45,18 @@ Only the dependency graph metadata is corrected:
 - no claim/novelty scope changes;
 - the published `v0.1.0` tag and release remain immutable historical evidence.
 
-Proposed additive repository path:
+Applied additive repository path:
 
 `benchmarks/publication-evidence/2026-08-26-v104-1/`
+
+## Publication status
+
+The correction is applied additively on `master`.
+
+The `v0.1.1` tag records the initial correction checkpoint but its GitHub
+Release was intentionally left unpublished after a stale preview-status field
+was detected in this correction metadata. The finalized correction metadata is
+released from the subsequent `v0.1.2` checkpoint.
+
+No scientific theorem, certificate payload, obstruction atlas, or `v0.1.0`
+historical release is changed by this metadata finalization.
