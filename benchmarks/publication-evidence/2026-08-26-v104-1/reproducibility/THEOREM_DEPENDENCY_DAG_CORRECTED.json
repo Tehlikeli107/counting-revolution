@@ -1,0 +1,180 @@
+{
+  "version": "v104.1-correction",
+  "correction_type": "dependency_graph_integrity_only",
+  "supersedes_for_dependency_graph_only": {
+    "tag": "v0.1.0",
+    "path": "benchmarks/publication-evidence/2026-08-26-v104/reproducibility/THEOREM_DEPENDENCY_DAG.json",
+    "git_blob_sha": "cb02846ed3914764aafe6a095fc2566b037c2532"
+  },
+  "root_node": "V104",
+  "root_claim": "finite_n10_information_frontier",
+  "root_result": [
+    5,
+    3,
+    3,
+    2,
+    2,
+    2,
+    1
+  ],
+  "nodes": {
+    "V75": {
+      "claim": "0-bit minimum atomic fields = 5",
+      "type": "source certificate"
+    },
+    "V86": {
+      "claim": "e4-only exact maximum collision-class size = 57",
+      "type": "historical source result referenced by V102"
+    },
+    "V88": {
+      "claim": "e2-only exact maximum collision-class size = 65,500",
+      "type": "historical source result referenced by V102"
+    },
+    "V90": {
+      "claim": "single-field closure; e4 exact max class 57",
+      "type": "source certificate"
+    },
+    "V90.1": {
+      "claim": "corrected generic rank proof using full V83 injective key",
+      "type": "source certificate"
+    },
+    "V91": {
+      "claim": "e2+e4 exact max class 10",
+      "type": "source certificate"
+    },
+    "V92": {
+      "claim": "e2+e4+tree exact max class 4; one-bit triples max class 2",
+      "type": "source certificate"
+    },
+    "V94": {
+      "claim": "explicit finite-n10 one-bit construction",
+      "type": "source certificate"
+    },
+    "V96": {
+      "claim": "all pairs + arbitrary 1 bit impossible",
+      "type": "source certificate"
+    },
+    "V97.1": {
+      "claim": "e2+e3 exact maximum collision-class size = 393",
+      "type": "historical source result referenced by V102"
+    },
+    "V98": {
+      "claim": "all pairs + arbitrary 2 bits impossible",
+      "type": "source certificate"
+    },
+    "V100": {
+      "claim": "e2+e6 exact max class 7; 3-bit minimum fields = 2",
+      "type": "source certificate"
+    },
+    "V101": {
+      "claim": "frontier consolidation [5,3,3,2,2,2,1]",
+      "type": "consolidation"
+    },
+    "V102": {
+      "claim": "explicit obstruction atlas supporting pair/single lower bounds",
+      "type": "consolidation"
+    },
+    "V103": {
+      "claim": "publication-readiness and preliminary literature audit",
+      "type": "claim-safety"
+    },
+    "V104": {
+      "claim": "publication release candidate consolidating V101/V102/V103",
+      "type": "release root"
+    }
+  },
+  "edges": [
+    [
+      "V75",
+      "V101"
+    ],
+    [
+      "V90",
+      "V101"
+    ],
+    [
+      "V90.1",
+      "V101"
+    ],
+    [
+      "V91",
+      "V101"
+    ],
+    [
+      "V92",
+      "V101"
+    ],
+    [
+      "V94",
+      "V101"
+    ],
+    [
+      "V96",
+      "V101"
+    ],
+    [
+      "V98",
+      "V101"
+    ],
+    [
+      "V100",
+      "V101"
+    ],
+    [
+      "V86",
+      "V102"
+    ],
+    [
+      "V88",
+      "V102"
+    ],
+    [
+      "V90",
+      "V102"
+    ],
+    [
+      "V91",
+      "V102"
+    ],
+    [
+      "V97.1",
+      "V102"
+    ],
+    [
+      "V98",
+      "V102"
+    ],
+    [
+      "V100",
+      "V102"
+    ],
+    [
+      "V101",
+      "V102"
+    ],
+    [
+      "V101",
+      "V103"
+    ],
+    [
+      "V102",
+      "V103"
+    ],
+    [
+      "V101",
+      "V104"
+    ],
+    [
+      "V102",
+      "V104"
+    ],
+    [
+      "V103",
+      "V104"
+    ]
+  ],
+  "scope": "complete finite n=10 non-isomorphic simple graph catalog; explicit aligned atomic deleted-card family {e1,...,e9,tree}; no general GI/reconstruction/novelty claim",
+  "scientific_result_changed": false,
+  "certificate_payload_changed": false,
+  "correction_note": "Adds the previously referenced-but-undefined V86, V88, V97.1 and V104 nodes. Edge set and frontier result are unchanged."
+}

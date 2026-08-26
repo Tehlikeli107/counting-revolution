@@ -1,0 +1,35 @@
+{
+  "version": "v111",
+  "result": "CORRECTION_PREVIEW",
+  "correction_path": "benchmarks/publication-evidence/2026-08-26-v104-1",
+  "source_tag": "v0.1.0",
+  "source_dependency_dag_path": "benchmarks/publication-evidence/2026-08-26-v104/reproducibility/THEOREM_DEPENDENCY_DAG.json",
+  "source_dependency_dag_git_blob_sha": "cb02846ed3914764aafe6a095fc2566b037c2532",
+  "frontier": [
+    5,
+    3,
+    3,
+    2,
+    2,
+    2,
+    1
+  ],
+  "scientific_result_changed": false,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1415,
+      "sha256": "acb136aceb6465d4aa11da41b2ff3683825bee2fb2071afa9cac9a0f844f229f"
+    },
+    {
+      "path": "reproducibility/THEOREM_DEPENDENCY_DAG_CORRECTED.json",
+      "bytes": 3763,
+      "sha256": "9c8d4186b0f71a52f23b38707e9b9e9041eb5a106864bd5e01348744f6b307f8"
+    },
+    {
+      "path": "reproducibility/VERIFY_DAG_INTEGRITY.py",
+      "bytes": 2781,
+      "sha256": "26f8a6f76238e5180f3f176681e1b60af31b4fe27ba001f399c17c20fc7ae947"
+    }
+  ]
+}
