@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this research code or evidence, please cite this repository release."
+title: "Counting Revolution: finite n=10 information frontier for aligned vertex-deleted graph invariants"
+type: software
+authors:
+  - family-names: "Kurnaz"
+    given-names: "Salih Can"
+version: "0.1.0"
+date-released: "2026-08-26"
+repository-code: "https://github.com/salihcankurnaz/counting-revolution"
+url: "https://github.com/salihcankurnaz/counting-revolution"
