@@ -1,0 +1,36 @@
+{
+  "version": "v0.2.0-raw-replication",
+  "frontier": [
+    5,
+    3,
+    3,
+    2,
+    2,
+    2,
+    1
+  ],
+  "scientific_result_changed": false,
+  "historical_v73_used": false,
+  "reference_run": {
+    "result_zip_name": "V119_INDEPENDENT_RAW_FRONTIER_REPLICATION_RESULT.zip",
+    "result_zip_bytes": 4755,
+    "result_zip_sha256": "4b0d4d6b50529bbf24eca45b5f26039a88890da83b467044ba8c1221ac562e10",
+    "atomic_dataset_bytes": 4802067200,
+    "atomic_dataset_sha256": "6ca20a0b6deb6a931fefd4b777b268e2d254d6a7a3eed118d574913976d9d5b9",
+    "zero_bit_complete_counts": [
+      0,
+      0,
+      0,
+      0,
+      5
+    ],
+    "zero_bit_direct_counterexamples": 632,
+    "v102_direct_nonisomorphism_checks": 5730,
+    "explicit_one_bit_classes": [
+      125,
+      125
+    ]
+  },
+  "clean_machine_status": "NOT_YET_TESTED",
+  "submission_gate": "HOLD"
+}

@@ -1,0 +1,42 @@
+{
+  "version": "v119",
+  "mode": "INDEPENDENT_RAW_FRONTIER_REPLICATION",
+  "catalog_graphs": 12005168,
+  "catalog_sha256": "923cabf28082cba3ee296251d23eee21b32056b36cf4952e42958d468357df36",
+  "atomic_fields": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6",
+    "e7",
+    "e8",
+    "e9",
+    "tree"
+  ],
+  "frontier_target": [
+    5,
+    3,
+    3,
+    2,
+    2,
+    2,
+    1
+  ],
+  "historical_v73_required": false,
+  "resumable": true,
+  "github_writes": false,
+  "embedded_certificates": {
+    "V63_HARDSET_CERTIFICATE.zip": {
+      "bytes": 127251,
+      "sha256": "f1304f278f1089678970e8c7393af1a55d2a8759c985bf530eb52238520ac393"
+    },
+    "V102_OBSTRUCTION_ATLAS_CERTIFICATE.zip": {
+      "bytes": 15626,
+      "sha256": "d61ec14b151c25e820e892e014878f35fdb41a43dd154a2053e2672d698274f6"
+    }
+  },
+  "static_selftest": "OK",
+  "zero_bit_counterexample_nonisomorphism_scope": "all incomplete subsets k=1..5"
+}
